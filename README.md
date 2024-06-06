@@ -1,1 +1,1 @@
-# yumemi-ios-junior-engineer-codecheck-app
+# 株式会社ゆめみ iOS 未経験者エンジニア向けコードチェック課題
