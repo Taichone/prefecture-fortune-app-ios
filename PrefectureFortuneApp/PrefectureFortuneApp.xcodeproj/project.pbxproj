@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52E13ABD2C11D3CE00A5A7C4 /* PrefectureFortuneAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13ABC2C11D3CE00A5A7C4 /* PrefectureFortuneAppApp.swift */; };
+		52E13ABF2C11D3CE00A5A7C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13ABE2C11D3CE00A5A7C4 /* ContentView.swift */; };
+		52E13AC12C11D3D000A5A7C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */; };
+		52E13AC42C11D3D000A5A7C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E13AC32C11D3D000A5A7C4 /* Preview Assets.xcassets */; };
+		52E13ACE2C11D3D000A5A7C4 /* PrefectureFortuneAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13ACD2C11D3D000A5A7C4 /* PrefectureFortuneAppTests.swift */; };
+		52E13AD82C11D3D000A5A7C4 /* PrefectureFortuneAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13AD72C11D3D000A5A7C4 /* PrefectureFortuneAppUITests.swift */; };
+		52E13ADA2C11D3D000A5A7C4 /* PrefectureFortuneAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13AD92C11D3D000A5A7C4 /* PrefectureFortuneAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52E13ACA2C11D3D000A5A7C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52E13AB12C11D3CE00A5A7C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52E13AB82C11D3CE00A5A7C4;
+			remoteInfo = PrefectureFortuneApp;
+		};
+		52E13AD42C11D3D000A5A7C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52E13AB12C11D3CE00A5A7C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52E13AB82C11D3CE00A5A7C4;
+			remoteInfo = PrefectureFortuneApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52E13AB92C11D3CE00A5A7C4 /* PrefectureFortuneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrefectureFortuneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E13ABC2C11D3CE00A5A7C4 /* PrefectureFortuneAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureFortuneAppApp.swift; sourceTree = "<group>"; };
+		52E13ABE2C11D3CE00A5A7C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52E13AC32C11D3D000A5A7C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		52E13AC92C11D3D000A5A7C4 /* PrefectureFortuneAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrefectureFortuneAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E13ACD2C11D3D000A5A7C4 /* PrefectureFortuneAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureFortuneAppTests.swift; sourceTree = "<group>"; };
+		52E13AD32C11D3D000A5A7C4 /* PrefectureFortuneAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrefectureFortuneAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E13AD72C11D3D000A5A7C4 /* PrefectureFortuneAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureFortuneAppUITests.swift; sourceTree = "<group>"; };
+		52E13AD92C11D3D000A5A7C4 /* PrefectureFortuneAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureFortuneAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52E13AB62C11D3CE00A5A7C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E13AC62C11D3D000A5A7C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E13AD02C11D3D000A5A7C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52E13AB02C11D3CE00A5A7C4 = {
+			isa = PBXGroup;
+			children = (
+				52E13ABB2C11D3CE00A5A7C4 /* PrefectureFortuneApp */,
+				52E13ACC2C11D3D000A5A7C4 /* PrefectureFortuneAppTests */,
+				52E13AD62C11D3D000A5A7C4 /* PrefectureFortuneAppUITests */,
+				52E13ABA2C11D3CE00A5A7C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52E13ABA2C11D3CE00A5A7C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52E13AB92C11D3CE00A5A7C4 /* PrefectureFortuneApp.app */,
+				52E13AC92C11D3D000A5A7C4 /* PrefectureFortuneAppTests.xctest */,
+				52E13AD32C11D3D000A5A7C4 /* PrefectureFortuneAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52E13ABB2C11D3CE00A5A7C4 /* PrefectureFortuneApp */ = {
+			isa = PBXGroup;
+			children = (
+				52E13ABC2C11D3CE00A5A7C4 /* PrefectureFortuneAppApp.swift */,
+				52E13ABE2C11D3CE00A5A7C4 /* ContentView.swift */,
+				52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */,
+				52E13AC22C11D3D000A5A7C4 /* Preview Content */,
+			);
+			path = PrefectureFortuneApp;
+			sourceTree = "<group>";
+		};
+		52E13AC22C11D3D000A5A7C4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				52E13AC32C11D3D000A5A7C4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52E13ACC2C11D3D000A5A7C4 /* PrefectureFortuneAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				52E13ACD2C11D3D000A5A7C4 /* PrefectureFortuneAppTests.swift */,
+			);
+			path = PrefectureFortuneAppTests;
+			sourceTree = "<group>";
+		};
+		52E13AD62C11D3D000A5A7C4 /* PrefectureFortuneAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				52E13AD72C11D3D000A5A7C4 /* PrefectureFortuneAppUITests.swift */,
+				52E13AD92C11D3D000A5A7C4 /* PrefectureFortuneAppUITestsLaunchTests.swift */,
+			);
+			path = PrefectureFortuneAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52E13AB82C11D3CE00A5A7C4 /* PrefectureFortuneApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52E13ADD2C11D3D000A5A7C4 /* Build configuration list for PBXNativeTarget "PrefectureFortuneApp" */;
+			buildPhases = (
+				52E13AB52C11D3CE00A5A7C4 /* Sources */,
+				52E13AB62C11D3CE00A5A7C4 /* Frameworks */,
+				52E13AB72C11D3CE00A5A7C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrefectureFortuneApp;
+			productName = PrefectureFortuneApp;
+			productReference = 52E13AB92C11D3CE00A5A7C4 /* PrefectureFortuneApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52E13AC82C11D3D000A5A7C4 /* PrefectureFortuneAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52E13AE02C11D3D000A5A7C4 /* Build configuration list for PBXNativeTarget "PrefectureFortuneAppTests" */;
+			buildPhases = (
+				52E13AC52C11D3D000A5A7C4 /* Sources */,
+				52E13AC62C11D3D000A5A7C4 /* Frameworks */,
+				52E13AC72C11D3D000A5A7C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52E13ACB2C11D3D000A5A7C4 /* PBXTargetDependency */,
+			);
+			name = PrefectureFortuneAppTests;
+			productName = PrefectureFortuneAppTests;
+			productReference = 52E13AC92C11D3D000A5A7C4 /* PrefectureFortuneAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		52E13AD22C11D3D000A5A7C4 /* PrefectureFortuneAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52E13AE32C11D3D000A5A7C4 /* Build configuration list for PBXNativeTarget "PrefectureFortuneAppUITests" */;
+			buildPhases = (
+				52E13ACF2C11D3D000A5A7C4 /* Sources */,
+				52E13AD02C11D3D000A5A7C4 /* Frameworks */,
+				52E13AD12C11D3D000A5A7C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52E13AD52C11D3D000A5A7C4 /* PBXTargetDependency */,
+			);
+			name = PrefectureFortuneAppUITests;
+			productName = PrefectureFortuneAppUITests;
+			productReference = 52E13AD32C11D3D000A5A7C4 /* PrefectureFortuneAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52E13AB12C11D3CE00A5A7C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					52E13AB82C11D3CE00A5A7C4 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					52E13AC82C11D3D000A5A7C4 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 52E13AB82C11D3CE00A5A7C4;
+					};
+					52E13AD22C11D3D000A5A7C4 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 52E13AB82C11D3CE00A5A7C4;
+					};
+				};
+			};
+			buildConfigurationList = 52E13AB42C11D3CE00A5A7C4 /* Build configuration list for PBXProject "PrefectureFortuneApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52E13AB02C11D3CE00A5A7C4;
+			productRefGroup = 52E13ABA2C11D3CE00A5A7C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52E13AB82C11D3CE00A5A7C4 /* PrefectureFortuneApp */,
+				52E13AC82C11D3D000A5A7C4 /* PrefectureFortuneAppTests */,
+				52E13AD22C11D3D000A5A7C4 /* PrefectureFortuneAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52E13AB72C11D3CE00A5A7C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E13AC42C11D3D000A5A7C4 /* Preview Assets.xcassets in Resources */,
+				52E13AC12C11D3D000A5A7C4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E13AC72C11D3D000A5A7C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E13AD12C11D3D000A5A7C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52E13AB52C11D3CE00A5A7C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E13ABF2C11D3CE00A5A7C4 /* ContentView.swift in Sources */,
+				52E13ABD2C11D3CE00A5A7C4 /* PrefectureFortuneAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E13AC52C11D3D000A5A7C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E13ACE2C11D3D000A5A7C4 /* PrefectureFortuneAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E13ACF2C11D3D000A5A7C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E13AD82C11D3D000A5A7C4 /* PrefectureFortuneAppUITests.swift in Sources */,
+				52E13ADA2C11D3D000A5A7C4 /* PrefectureFortuneAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52E13ACB2C11D3D000A5A7C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52E13AB82C11D3CE00A5A7C4 /* PrefectureFortuneApp */;
+			targetProxy = 52E13ACA2C11D3D000A5A7C4 /* PBXContainerItemProxy */;
+		};
+		52E13AD52C11D3D000A5A7C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52E13AB82C11D3CE00A5A7C4 /* PrefectureFortuneApp */;
+			targetProxy = 52E13AD42C11D3D000A5A7C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		52E13ADB2C11D3D000A5A7C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52E13ADC2C11D3D000A5A7C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52E13ADE2C11D3D000A5A7C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PrefectureFortuneApp/Preview Content\"";
+				DEVELOPMENT_TEAM = PBBV5BVMZD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taichone.PrefectureFortuneApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52E13ADF2C11D3D000A5A7C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PrefectureFortuneApp/Preview Content\"";
+				DEVELOPMENT_TEAM = PBBV5BVMZD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taichone.PrefectureFortuneApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		52E13AE12C11D3D000A5A7C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PBBV5BVMZD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taichone.PrefectureFortuneAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrefectureFortuneApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PrefectureFortuneApp";
+			};
+			name = Debug;
+		};
+		52E13AE22C11D3D000A5A7C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PBBV5BVMZD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taichone.PrefectureFortuneAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrefectureFortuneApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PrefectureFortuneApp";
+			};
+			name = Release;
+		};
+		52E13AE42C11D3D000A5A7C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PBBV5BVMZD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taichone.PrefectureFortuneAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PrefectureFortuneApp;
+			};
+			name = Debug;
+		};
+		52E13AE52C11D3D000A5A7C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PBBV5BVMZD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taichone.PrefectureFortuneAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PrefectureFortuneApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52E13AB42C11D3CE00A5A7C4 /* Build configuration list for PBXProject "PrefectureFortuneApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E13ADB2C11D3D000A5A7C4 /* Debug */,
+				52E13ADC2C11D3D000A5A7C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52E13ADD2C11D3D000A5A7C4 /* Build configuration list for PBXNativeTarget "PrefectureFortuneApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E13ADE2C11D3D000A5A7C4 /* Debug */,
+				52E13ADF2C11D3D000A5A7C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52E13AE02C11D3D000A5A7C4 /* Build configuration list for PBXNativeTarget "PrefectureFortuneAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E13AE12C11D3D000A5A7C4 /* Debug */,
+				52E13AE22C11D3D000A5A7C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52E13AE32C11D3D000A5A7C4 /* Build configuration list for PBXNativeTarget "PrefectureFortuneAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E13AE42C11D3D000A5A7C4 /* Debug */,
+				52E13AE52C11D3D000A5A7C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52E13AB12C11D3CE00A5A7C4 /* Project object */;
+}
