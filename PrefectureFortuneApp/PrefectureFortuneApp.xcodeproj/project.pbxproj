@@ -14,6 +14,10 @@
 		52E13ACE2C11D3D000A5A7C4 /* PrefectureFortuneAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13ACD2C11D3D000A5A7C4 /* PrefectureFortuneAppTests.swift */; };
 		52E13AD82C11D3D000A5A7C4 /* PrefectureFortuneAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13AD72C11D3D000A5A7C4 /* PrefectureFortuneAppUITests.swift */; };
 		52E13ADA2C11D3D000A5A7C4 /* PrefectureFortuneAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13AD92C11D3D000A5A7C4 /* PrefectureFortuneAppUITestsLaunchTests.swift */; };
+		52E13AE92C11D59800A5A7C4 /* YearMonthDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13AE82C11D59800A5A7C4 /* YearMonthDay.swift */; };
+		52E13AEC2C11D5F800A5A7C4 /* MonthDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13AEB2C11D5F800A5A7C4 /* MonthDay.swift */; };
+		52E13AEE2C11D82F00A5A7C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13AED2C11D82F00A5A7C4 /* User.swift */; };
+		52E13AF02C11D84C00A5A7C4 /* Prefecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13AEF2C11D84C00A5A7C4 /* Prefecture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		52E13AD32C11D3D000A5A7C4 /* PrefectureFortuneAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrefectureFortuneAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E13AD72C11D3D000A5A7C4 /* PrefectureFortuneAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureFortuneAppUITests.swift; sourceTree = "<group>"; };
 		52E13AD92C11D3D000A5A7C4 /* PrefectureFortuneAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureFortuneAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52E13AE82C11D59800A5A7C4 /* YearMonthDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearMonthDay.swift; sourceTree = "<group>"; };
+		52E13AEB2C11D5F800A5A7C4 /* MonthDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDay.swift; sourceTree = "<group>"; };
+		52E13AED2C11D82F00A5A7C4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		52E13AEF2C11D84C00A5A7C4 /* Prefecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefecture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,7 @@
 		52E13ABB2C11D3CE00A5A7C4 /* PrefectureFortuneApp */ = {
 			isa = PBXGroup;
 			children = (
+				52E13AE62C11D55E00A5A7C4 /* Entity */,
 				52E13ABC2C11D3CE00A5A7C4 /* PrefectureFortuneAppApp.swift */,
 				52E13ABE2C11D3CE00A5A7C4 /* ContentView.swift */,
 				52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */,
@@ -125,6 +134,17 @@
 				52E13AD92C11D3D000A5A7C4 /* PrefectureFortuneAppUITestsLaunchTests.swift */,
 			);
 			path = PrefectureFortuneAppUITests;
+			sourceTree = "<group>";
+		};
+		52E13AE62C11D55E00A5A7C4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				52E13AEB2C11D5F800A5A7C4 /* MonthDay.swift */,
+				52E13AE82C11D59800A5A7C4 /* YearMonthDay.swift */,
+				52E13AED2C11D82F00A5A7C4 /* User.swift */,
+				52E13AEF2C11D84C00A5A7C4 /* Prefecture.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E13AF02C11D84C00A5A7C4 /* Prefecture.swift in Sources */,
+				52E13AE92C11D59800A5A7C4 /* YearMonthDay.swift in Sources */,
+				52E13AEC2C11D5F800A5A7C4 /* MonthDay.swift in Sources */,
 				52E13ABF2C11D3CE00A5A7C4 /* ContentView.swift in Sources */,
+				52E13AEE2C11D82F00A5A7C4 /* User.swift in Sources */,
 				52E13ABD2C11D3CE00A5A7C4 /* PrefectureFortuneAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
