@@ -22,12 +22,12 @@ class FortuneViewModel: ObservableObject {
 
     func onFortuneResultViewAppear() {
         Task {
-            await self.getFortuneResult()
+            await self.fetchResultPrefecture()
             self.fortuneResultViewIsLoading = false
         }
     }
 
-    private func getFortuneResult() async {
+    private func fetchResultPrefecture() async {
         let user = User(name: self.name,
                         birthday: self.birthday.convertToYearMonthDay(),
                         bloodType: self.bloodType
