@@ -11,7 +11,21 @@ struct FortuneResultView: View {
     @ObservedObject var viewModel: FortuneViewModel
 
     var body: some View {
-        Text("FortuneResultView")
+        VStack {
+            if self.viewModel.fortuneResultViewIsLoading {
+                HStack {
+                    Text("Loading...")
+                        .padding()
+                    ProgressView()
+                }
+            } else {
+                // TODO: 結果に応じて都道府県情報を表示
+                Text("FortuneResultView")
+            }
+        }
+        .onAppear {
+            self.viewModel.onFortuneResultViewAppear()
+        }
     }
 }
 
