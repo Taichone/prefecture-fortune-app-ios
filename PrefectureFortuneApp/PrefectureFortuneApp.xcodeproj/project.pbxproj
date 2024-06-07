@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		52E13ABD2C11D3CE00A5A7C4 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13ABC2C11D3CE00A5A7C4 /* App.swift */; };
-		52E13ABF2C11D3CE00A5A7C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13ABE2C11D3CE00A5A7C4 /* ContentView.swift */; };
 		52E13AC12C11D3D000A5A7C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */; };
 		52E13AC42C11D3D000A5A7C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E13AC32C11D3D000A5A7C4 /* Preview Assets.xcassets */; };
 		52E13ACE2C11D3D000A5A7C4 /* PrefectureFortuneAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13ACD2C11D3D000A5A7C4 /* PrefectureFortuneAppTests.swift */; };
@@ -18,6 +17,8 @@
 		52E13AEC2C11D5F800A5A7C4 /* MonthDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13AEB2C11D5F800A5A7C4 /* MonthDay.swift */; };
 		52E13AEE2C11D82F00A5A7C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13AED2C11D82F00A5A7C4 /* User.swift */; };
 		52E13AF02C11D84C00A5A7C4 /* Prefecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13AEF2C11D84C00A5A7C4 /* Prefecture.swift */; };
+		52E13AFF2C12AF5000A5A7C4 /* FortuneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13AFE2C12AF5000A5A7C4 /* FortuneViewModel.swift */; };
+		52E13B052C12AFBC00A5A7C4 /* FortuneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13B042C12AFBC00A5A7C4 /* FortuneView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 /* Begin PBXFileReference section */
 		52E13AB92C11D3CE00A5A7C4 /* PrefectureFortuneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrefectureFortuneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E13ABC2C11D3CE00A5A7C4 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		52E13ABE2C11D3CE00A5A7C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E13AC32C11D3D000A5A7C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52E13AC92C11D3D000A5A7C4 /* PrefectureFortuneAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrefectureFortuneAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +52,8 @@
 		52E13AEB2C11D5F800A5A7C4 /* MonthDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDay.swift; sourceTree = "<group>"; };
 		52E13AED2C11D82F00A5A7C4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		52E13AEF2C11D84C00A5A7C4 /* Prefecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefecture.swift; sourceTree = "<group>"; };
+		52E13AFE2C12AF5000A5A7C4 /* FortuneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneViewModel.swift; sourceTree = "<group>"; };
+		52E13B042C12AFBC00A5A7C4 /* FortuneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +104,10 @@
 		52E13ABB2C11D3CE00A5A7C4 /* PrefectureFortuneApp */ = {
 			isa = PBXGroup;
 			children = (
+				52E13B012C12AF7500A5A7C4 /* Extensions */,
+				52E13AFB2C12AF2C00A5A7C4 /* Feature */,
 				52E13AE62C11D55E00A5A7C4 /* Entity */,
 				52E13ABC2C11D3CE00A5A7C4 /* App.swift */,
-				52E13ABE2C11D3CE00A5A7C4 /* ContentView.swift */,
 				52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */,
 				52E13AC22C11D3D000A5A7C4 /* Preview Content */,
 			);
@@ -145,6 +148,38 @@
 				52E13AEF2C11D84C00A5A7C4 /* Prefecture.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		52E13AFB2C12AF2C00A5A7C4 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				52E13AFD2C12AF3C00A5A7C4 /* ViewModel */,
+				52E13AFC2C12AF3800A5A7C4 /* View */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		52E13AFC2C12AF3800A5A7C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52E13B042C12AFBC00A5A7C4 /* FortuneView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52E13AFD2C12AF3C00A5A7C4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52E13AFE2C12AF5000A5A7C4 /* FortuneViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52E13B012C12AF7500A5A7C4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,8 +314,9 @@
 			files = (
 				52E13AF02C11D84C00A5A7C4 /* Prefecture.swift in Sources */,
 				52E13AE92C11D59800A5A7C4 /* YearMonthDay.swift in Sources */,
+				52E13B052C12AFBC00A5A7C4 /* FortuneView.swift in Sources */,
 				52E13AEC2C11D5F800A5A7C4 /* MonthDay.swift in Sources */,
-				52E13ABF2C11D3CE00A5A7C4 /* ContentView.swift in Sources */,
+				52E13AFF2C12AF5000A5A7C4 /* FortuneViewModel.swift in Sources */,
 				52E13AEE2C11D82F00A5A7C4 /* User.swift in Sources */,
 				52E13ABD2C11D3CE00A5A7C4 /* App.swift in Sources */,
 			);
