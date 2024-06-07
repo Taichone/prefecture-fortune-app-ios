@@ -19,6 +19,8 @@
 		52E13AF02C11D84C00A5A7C4 /* Prefecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13AEF2C11D84C00A5A7C4 /* Prefecture.swift */; };
 		52E13AFF2C12AF5000A5A7C4 /* FortuneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13AFE2C12AF5000A5A7C4 /* FortuneViewModel.swift */; };
 		52E13B052C12AFBC00A5A7C4 /* FortuneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13B042C12AFBC00A5A7C4 /* FortuneView.swift */; };
+		52E13B072C12B63700A5A7C4 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13B062C12B63700A5A7C4 /* Date.swift */; };
+		52E13B0A2C12BD2400A5A7C4 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13B092C12BD2400A5A7C4 /* DateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		52E13AEF2C11D84C00A5A7C4 /* Prefecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefecture.swift; sourceTree = "<group>"; };
 		52E13AFE2C12AF5000A5A7C4 /* FortuneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneViewModel.swift; sourceTree = "<group>"; };
 		52E13B042C12AFBC00A5A7C4 /* FortuneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneView.swift; sourceTree = "<group>"; };
+		52E13B062C12B63700A5A7C4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		52E13B092C12BD2400A5A7C4 /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				52E13ACD2C11D3D000A5A7C4 /* PrefectureFortuneAppTests.swift */,
+				52E13B092C12BD2400A5A7C4 /* DateTests.swift */,
 			);
 			path = PrefectureFortuneAppTests;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 		52E13B012C12AF7500A5A7C4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				52E13B062C12B63700A5A7C4 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 				52E13AF02C11D84C00A5A7C4 /* Prefecture.swift in Sources */,
 				52E13AE92C11D59800A5A7C4 /* YearMonthDay.swift in Sources */,
 				52E13B052C12AFBC00A5A7C4 /* FortuneView.swift in Sources */,
+				52E13B072C12B63700A5A7C4 /* Date.swift in Sources */,
 				52E13AEC2C11D5F800A5A7C4 /* MonthDay.swift in Sources */,
 				52E13AFF2C12AF5000A5A7C4 /* FortuneViewModel.swift in Sources */,
 				52E13AEE2C11D82F00A5A7C4 /* User.swift in Sources */,
@@ -327,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E13ACE2C11D3D000A5A7C4 /* PrefectureFortuneAppTests.swift in Sources */,
+				52E13B0A2C12BD2400A5A7C4 /* DateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
