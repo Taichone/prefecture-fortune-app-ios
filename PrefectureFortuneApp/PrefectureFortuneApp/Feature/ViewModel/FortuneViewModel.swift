@@ -7,11 +7,18 @@
 
 import Foundation
 
+@MainActor
 class FortuneViewModel: ObservableObject {
     @Published var name = ""
     @Published var birthday = Date()
     @Published var bloodType = User.BloodType.a
     @Published var fortuneResultViewIsLoading = true
+    var resultPrefecture = Prefecture(name: "", capital: "", citizenDay: nil, hasCoastLine: false, logoUrl: "", brief: "")
+    let fortuneTeller: PrefectureFortuneTeller
+
+    init(fortuneTeller: PrefectureFortuneTeller) {
+        self.fortuneTeller = fortuneTeller
+    }
 
     func onFortuneResultViewAppear() {
         Task {
@@ -21,7 +28,15 @@ class FortuneViewModel: ObservableObject {
     }
 
     private func getFortuneResult() async {
-        // TODO: API リクエスト
-        sleep(1)
+        let user = User(name: self.name,
+                        birthday: self.birthday.convertToYearMonthDay(),
+                        bloodType: self.bloodType
+        )
+        let result = self.fortuneTeller.fetchFortuneResultPrefecture(from: user)
+        self.resultPrefecture = result
     }
+}
+
+protocol PrefectureFortuneTeller {
+    func fetchFortuneResultPrefecture(from: User) -> Prefecture
 }

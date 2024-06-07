@@ -44,5 +44,5 @@ struct FortuneView: View {
 }
 
 #Preview {
-    FortuneView(viewModel: FortuneViewModel())
+    FortuneView(viewModel: FortuneViewModel(fortuneTeller: FortuneAPIClient.shared))
 }
