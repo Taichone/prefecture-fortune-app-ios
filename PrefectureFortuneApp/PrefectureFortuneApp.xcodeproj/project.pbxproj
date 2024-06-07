@@ -21,6 +21,7 @@
 		52E13B052C12AFBC00A5A7C4 /* FortuneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13B042C12AFBC00A5A7C4 /* FortuneView.swift */; };
 		52E13B072C12B63700A5A7C4 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13B062C12B63700A5A7C4 /* Date.swift */; };
 		52E13B0A2C12BD2400A5A7C4 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13B092C12BD2400A5A7C4 /* DateTests.swift */; };
+		52E13B0C2C12C52600A5A7C4 /* FortuneResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13B0B2C12C52600A5A7C4 /* FortuneResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		52E13B042C12AFBC00A5A7C4 /* FortuneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneView.swift; sourceTree = "<group>"; };
 		52E13B062C12B63700A5A7C4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		52E13B092C12BD2400A5A7C4 /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
+		52E13B0B2C12C52600A5A7C4 /* FortuneResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				52E13B042C12AFBC00A5A7C4 /* FortuneView.swift */,
+				52E13B0B2C12C52600A5A7C4 /* FortuneResultView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				52E13B072C12B63700A5A7C4 /* Date.swift in Sources */,
 				52E13AEC2C11D5F800A5A7C4 /* MonthDay.swift in Sources */,
 				52E13AFF2C12AF5000A5A7C4 /* FortuneViewModel.swift in Sources */,
+				52E13B0C2C12C52600A5A7C4 /* FortuneResultView.swift in Sources */,
 				52E13AEE2C11D82F00A5A7C4 /* User.swift in Sources */,
 				52E13ABD2C11D3CE00A5A7C4 /* App.swift in Sources */,
 			);

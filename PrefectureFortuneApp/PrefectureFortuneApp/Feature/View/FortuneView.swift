@@ -11,22 +11,34 @@ struct FortuneView: View {
     @StateObject var viewModel: FortuneViewModel
 
     var body: some View {
-        List {
-            Section("Your Information") {
-                TextField("Name", text: self.$viewModel.name)
-                DatePicker("Birthday", selection: self.$viewModel.birthday,
-                           displayedComponents: .date)
-                Picker("Blood Type", selection: self.$viewModel.bloodType) {
-                    ForEach(User.BloodType.allCases, id: \.self) { (type) in
-                        Text(type.displayName).tag(type)
+        NavigationStack {
+            List {
+                Section("Your Information") {
+                    TextField("Enter your name", text: self.$viewModel.name)
+                    DatePicker("Birthday", selection: self.$viewModel.birthday,
+                               displayedComponents: .date)
+                    Picker("Blood Type", selection: self.$viewModel.bloodType) {
+                        ForEach(User.BloodType.allCases, id: \.self) { (type) in
+                            Text(type.displayName).tag(type)
+                        }
                     }
                 }
-            }
 
-            // TODO: NavigationLink か Button にする
-            Text("Check Fortune!")
-                .bold()
-                .foregroundStyle(.gray)
+                if !self.viewModel.name.isEmpty {
+                    NavigationLink(
+                        destination: FortuneResultView(viewModel: self.viewModel),
+                        label: {
+                            Text("Check Fortune!")
+                                .bold()
+                                .foregroundStyle(.blue)
+                        }
+                    )
+                } else {
+                    Text("Check Fortune!")
+                        .bold()
+                        .foregroundStyle(.gray)
+                }
+            }
         }
     }
 }
