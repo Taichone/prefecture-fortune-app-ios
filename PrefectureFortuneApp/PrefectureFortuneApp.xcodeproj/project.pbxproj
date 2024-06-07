@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52E13ABD2C11D3CE00A5A7C4 /* PrefectureFortuneAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13ABC2C11D3CE00A5A7C4 /* PrefectureFortuneAppApp.swift */; };
+		52E13ABD2C11D3CE00A5A7C4 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13ABC2C11D3CE00A5A7C4 /* App.swift */; };
 		52E13ABF2C11D3CE00A5A7C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13ABE2C11D3CE00A5A7C4 /* ContentView.swift */; };
 		52E13AC12C11D3D000A5A7C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */; };
 		52E13AC42C11D3D000A5A7C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E13AC32C11D3D000A5A7C4 /* Preview Assets.xcassets */; };
@@ -39,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		52E13AB92C11D3CE00A5A7C4 /* PrefectureFortuneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrefectureFortuneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		52E13ABC2C11D3CE00A5A7C4 /* PrefectureFortuneAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureFortuneAppApp.swift; sourceTree = "<group>"; };
+		52E13ABC2C11D3CE00A5A7C4 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		52E13ABE2C11D3CE00A5A7C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E13AC32C11D3D000A5A7C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				52E13AE62C11D55E00A5A7C4 /* Entity */,
-				52E13ABC2C11D3CE00A5A7C4 /* PrefectureFortuneAppApp.swift */,
+				52E13ABC2C11D3CE00A5A7C4 /* App.swift */,
 				52E13ABE2C11D3CE00A5A7C4 /* ContentView.swift */,
 				52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */,
 				52E13AC22C11D3D000A5A7C4 /* Preview Content */,
@@ -282,7 +282,7 @@
 				52E13AEC2C11D5F800A5A7C4 /* MonthDay.swift in Sources */,
 				52E13ABF2C11D3CE00A5A7C4 /* ContentView.swift in Sources */,
 				52E13AEE2C11D82F00A5A7C4 /* User.swift in Sources */,
-				52E13ABD2C11D3CE00A5A7C4 /* PrefectureFortuneAppApp.swift in Sources */,
+				52E13ABD2C11D3CE00A5A7C4 /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

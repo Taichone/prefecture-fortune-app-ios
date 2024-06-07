@@ -1,5 +1,5 @@
 //
-//  PrefectureFortuneAppApp.swift
+//  App.swift
 //  PrefectureFortuneApp
 //
 //  Created by Taichi on 2024/06/06.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct PrefectureFortuneAppApp: App {
+struct PrefectureFortuneApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
