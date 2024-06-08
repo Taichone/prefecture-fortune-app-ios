@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52BEFCD02C14452100AFD253 /* PrefectureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BEFCCF2C14452100AFD253 /* PrefectureView.swift */; };
 		52E13ABD2C11D3CE00A5A7C4 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13ABC2C11D3CE00A5A7C4 /* App.swift */; };
 		52E13AC12C11D3D000A5A7C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */; };
 		52E13AC42C11D3D000A5A7C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E13AC32C11D3D000A5A7C4 /* Preview Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52BEFCCF2C14452100AFD253 /* PrefectureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureView.swift; sourceTree = "<group>"; };
 		52E13AB92C11D3CE00A5A7C4 /* PrefectureFortuneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrefectureFortuneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E13ABC2C11D3CE00A5A7C4 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				52E13B242C13FFF500A5A7C4 /* PrefectureImage.swift */,
+				52BEFCCF2C14452100AFD253 /* PrefectureView.swift */,
 			);
 			path = ViewComponent;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				52E13AF02C11D84C00A5A7C4 /* Prefecture.swift in Sources */,
 				52E13AE92C11D59800A5A7C4 /* YearMonthDay.swift in Sources */,
 				52E13B052C12AFBC00A5A7C4 /* FortuneView.swift in Sources */,
+				52BEFCD02C14452100AFD253 /* PrefectureView.swift in Sources */,
 				52E13B182C12D25D00A5A7C4 /* FortuneAPIClient.swift in Sources */,
 				52E13B072C12B63700A5A7C4 /* Date.swift in Sources */,
 				52E13AEC2C11D5F800A5A7C4 /* MonthDay.swift in Sources */,
