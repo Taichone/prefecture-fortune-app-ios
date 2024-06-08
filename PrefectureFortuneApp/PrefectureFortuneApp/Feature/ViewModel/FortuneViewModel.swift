@@ -29,9 +29,10 @@ class FortuneViewModel: ObservableObject {
     }
 
     private func fetchResultPrefecture() async {
-        let user = User(name: self.name,
-                        birthday: self.birthday.convertToYearMonthDay(),
-                        bloodType: self.bloodType
+        let user = User(
+            name: self.name,
+            birthday: self.birthday.convertToYearMonthDay(),
+            bloodType: self.bloodType
         )
 
         do {
