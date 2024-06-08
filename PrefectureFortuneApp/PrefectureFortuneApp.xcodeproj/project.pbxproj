@@ -91,6 +91,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52BEFCD32C14760F00AFD253 /* FortuneView */ = {
+			isa = PBXGroup;
+			children = (
+				52E13AFC2C12AF3800A5A7C4 /* View */,
+				52E13AFD2C12AF3C00A5A7C4 /* ViewModel */,
+			);
+			path = FortuneView;
+			sourceTree = "<group>";
+		};
+		52BEFCD42C14764900AFD253 /* FortuneLogView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FortuneLogView;
+			sourceTree = "<group>";
+		};
+		52BEFCD62C14776C00AFD253 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		52E13AB02C11D3CE00A5A7C4 = {
 			isa = PBXGroup;
 			children = (
@@ -116,9 +139,9 @@
 			children = (
 				52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */,
 				52E13ABC2C11D3CE00A5A7C4 /* App.swift */,
-				52E13B012C12AF7500A5A7C4 /* Extensions */,
-				52E13AFB2C12AF2C00A5A7C4 /* Feature */,
+				52E13AFB2C12AF2C00A5A7C4 /* Core */,
 				52E13AE62C11D55E00A5A7C4 /* Entity */,
+				52E13B012C12AF7500A5A7C4 /* Extensions */,
 				52E13B0D2C12CC4600A5A7C4 /* Service */,
 				52E13AC22C11D3D000A5A7C4 /* Preview Content */,
 			);
@@ -160,14 +183,15 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		52E13AFB2C12AF2C00A5A7C4 /* Feature */ = {
+		52E13AFB2C12AF2C00A5A7C4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				52E13B232C13FFC900A5A7C4 /* ViewComponent */,
-				52E13AFD2C12AF3C00A5A7C4 /* ViewModel */,
-				52E13AFC2C12AF3800A5A7C4 /* View */,
+				52E13B232C13FFC900A5A7C4 /* Components */,
+				52BEFCD32C14760F00AFD253 /* FortuneView */,
+				52BEFCD42C14764900AFD253 /* FortuneLogView */,
+				52BEFCD62C14776C00AFD253 /* Root */,
 			);
-			path = Feature;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		52E13AFC2C12AF3800A5A7C4 /* View */ = {
@@ -203,13 +227,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		52E13B232C13FFC900A5A7C4 /* ViewComponent */ = {
+		52E13B232C13FFC900A5A7C4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				52E13B242C13FFF500A5A7C4 /* PrefectureImage.swift */,
 				52BEFCCF2C14452100AFD253 /* PrefectureView.swift */,
 			);
-			path = ViewComponent;
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
