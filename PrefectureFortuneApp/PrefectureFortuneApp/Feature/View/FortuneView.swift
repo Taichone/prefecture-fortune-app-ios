@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct FortuneView: View {
     @StateObject var viewModel: FortuneViewModel
@@ -14,7 +15,16 @@ struct FortuneView: View {
         NavigationStack {
             List {
                 Section("Your Information") {
-                    TextField("Enter your name", text: self.$viewModel.name)
+                    TextField("Enter your name", text: Binding<String>(
+                        get: { self.viewModel.name },
+                        set: {
+                            // 文字数を制限して set する
+                            self.viewModel.name = String(
+                                $0.prefix(FortuneViewModel.maxNameLength)
+                            )
+                        }
+                    ))
+
                     DatePicker("Birthday", selection: self.$viewModel.birthday,
                                displayedComponents: .date)
                     Picker("Blood Type", selection: self.$viewModel.bloodType) {

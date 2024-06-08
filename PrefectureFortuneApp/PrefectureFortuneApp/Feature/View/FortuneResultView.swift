@@ -21,8 +21,19 @@ struct FortuneResultView: View {
                     ProgressView()
                 }
             } else {
-                // TODO: 結果に応じて都道府県情報を表示
-                Text("FortuneResultView")
+                List {
+                    Text(self.viewModel.resultPrefecture.name)
+                    Text("Capital: " + self.viewModel.resultPrefecture.capital)
+                    Text(
+                        self.viewModel.resultPrefecture.hasCoastLine ?
+                        "With coastline" : "No coastline"
+                    )
+                    if let citizenDayString = self.viewModel.resultPrefecture.citizenDay?.convertToString() {
+                        Text("CitizenDay: " + citizenDayString)
+                    }
+                    Text(self.viewModel.resultPrefecture.brief)
+                }
+                PrefectureImage(imageUrl: self.viewModel.resultPrefecture.logoUrl)
             }
 #if DEBUG
             Button("Send backNavigationTrigger") {

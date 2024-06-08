@@ -22,6 +22,7 @@
 		52E13B182C12D25D00A5A7C4 /* FortuneAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13B172C12D25D00A5A7C4 /* FortuneAPIClient.swift */; };
 		52E13B1E2C12D74600A5A7C4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 52E13B1D2C12D74600A5A7C4 /* Alamofire */; };
 		52E13B222C13F91C00A5A7C4 /* FortuneViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13B212C13F91C00A5A7C4 /* FortuneViewUITests.swift */; };
+		52E13B252C13FFF500A5A7C4 /* PrefectureImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13B242C13FFF500A5A7C4 /* PrefectureImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		52E13B0B2C12C52600A5A7C4 /* FortuneResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneResultView.swift; sourceTree = "<group>"; };
 		52E13B172C12D25D00A5A7C4 /* FortuneAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneAPIClient.swift; sourceTree = "<group>"; };
 		52E13B212C13F91C00A5A7C4 /* FortuneViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneViewUITests.swift; sourceTree = "<group>"; };
+		52E13B242C13FFF500A5A7C4 /* PrefectureImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		52E13AFB2C12AF2C00A5A7C4 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				52E13B232C13FFC900A5A7C4 /* ViewComponent */,
 				52E13AFD2C12AF3C00A5A7C4 /* ViewModel */,
 				52E13AFC2C12AF3800A5A7C4 /* View */,
 			);
@@ -196,6 +199,14 @@
 				52E13B172C12D25D00A5A7C4 /* FortuneAPIClient.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		52E13B232C13FFC900A5A7C4 /* ViewComponent */ = {
+			isa = PBXGroup;
+			children = (
+				52E13B242C13FFF500A5A7C4 /* PrefectureImage.swift */,
+			);
+			path = ViewComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +351,7 @@
 				52E13B182C12D25D00A5A7C4 /* FortuneAPIClient.swift in Sources */,
 				52E13B072C12B63700A5A7C4 /* Date.swift in Sources */,
 				52E13AEC2C11D5F800A5A7C4 /* MonthDay.swift in Sources */,
+				52E13B252C13FFF500A5A7C4 /* PrefectureImage.swift in Sources */,
 				52E13AFF2C12AF5000A5A7C4 /* FortuneViewModel.swift in Sources */,
 				52E13B0C2C12C52600A5A7C4 /* FortuneResultView.swift in Sources */,
 				52E13AEE2C11D82F00A5A7C4 /* User.swift in Sources */,

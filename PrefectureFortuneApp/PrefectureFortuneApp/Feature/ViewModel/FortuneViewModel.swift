@@ -47,6 +47,11 @@ class FortuneViewModel: ObservableObject {
     }
 }
 
+extension FortuneViewModel {
+    /// Fortune API の RequestBody.name 文字数上限
+    static let maxNameLength = 127
+}
+
 protocol PrefectureFortuneTeller {
     func fetchFortuneResultPrefecture(from: User) async throws -> Prefecture
 }
