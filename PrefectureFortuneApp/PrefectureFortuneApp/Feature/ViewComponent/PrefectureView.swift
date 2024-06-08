@@ -18,8 +18,9 @@ struct PrefectureView: View {
                 self.prefecture.hasCoastLine ?
                 "With coastline" : "No coastline"
             )
-            if let citizenDayString = self.prefecture.citizenDay?.convertToString() {
-                Text("CitizenDay: " + citizenDayString)
+            if let month = self.prefecture.citizenMonth,
+               let day = self.prefecture.citizenDay {
+                Text("CitizenDay: " + "\(month)/\(day)")
             }
             Text(self.prefecture.brief)
             PrefectureImage(imageUrl: self.prefecture.logoUrl)

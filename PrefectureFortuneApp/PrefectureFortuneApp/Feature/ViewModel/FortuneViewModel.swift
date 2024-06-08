@@ -14,7 +14,7 @@ class FortuneViewModel: ObservableObject {
     @Published var birthday = Date()
     @Published var bloodType = User.BloodType.a
     @Published var fortuneResultViewIsLoading = true
-    var resultPrefecture = Prefecture.placeholder
+    var resultPrefecture = Prefecture()
     let fortuneTeller: PrefectureFortuneTeller
     let backNavigationTrigger = PassthroughSubject<Void, Never>()
 
