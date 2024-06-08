@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 @MainActor
 class FortuneViewModel: ObservableObject {
@@ -15,6 +16,7 @@ class FortuneViewModel: ObservableObject {
     @Published var fortuneResultViewIsLoading = true
     var resultPrefecture = Prefecture.placeholder
     let fortuneTeller: PrefectureFortuneTeller
+    let backNavigationTrigger = PassthroughSubject<Void, Never>()
 
     init(fortuneTeller: PrefectureFortuneTeller) {
         self.fortuneTeller = fortuneTeller
@@ -39,8 +41,7 @@ class FortuneViewModel: ObservableObject {
             let result = try await self.fortuneTeller.fetchFortuneResultPrefecture(from: user)
             self.resultPrefecture = result
         } catch {
-            // TODO: FortuneView に戻る
-            // アラートを表示して、OK 押させて FortuneView に戻す
+            self.backNavigationTrigger.send() // FortuneView に戻す
             print(error)
         }
     }
