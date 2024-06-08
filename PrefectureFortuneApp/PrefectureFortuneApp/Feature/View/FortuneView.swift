@@ -25,8 +25,12 @@ struct FortuneView: View {
                         }
                     ))
 
-                    DatePicker("Birthday", selection: self.$viewModel.birthday,
-                               displayedComponents: .date)
+                    DatePicker(
+                        "Birthday",
+                        selection: self.$viewModel.birthday,
+                        displayedComponents: .date
+                    )
+
                     Picker("Blood Type", selection: self.$viewModel.bloodType) {
                         ForEach(User.BloodType.allCases, id: \.self) { (type) in
                             Text(type.displayName).tag(type)
