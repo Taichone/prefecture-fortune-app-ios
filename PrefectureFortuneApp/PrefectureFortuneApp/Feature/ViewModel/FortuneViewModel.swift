@@ -22,6 +22,7 @@ class FortuneViewModel: ObservableObject {
 
     func onFortuneResultViewAppear() {
         Task {
+            self.fortuneResultViewIsLoading = true
             await self.fetchResultPrefecture()
             self.fortuneResultViewIsLoading = false
         }
@@ -32,11 +33,18 @@ class FortuneViewModel: ObservableObject {
                         birthday: self.birthday.convertToYearMonthDay(),
                         bloodType: self.bloodType
         )
-        let result = self.fortuneTeller.fetchFortuneResultPrefecture(from: user)
-        self.resultPrefecture = result
+
+        do {
+            let result = try await self.fortuneTeller.fetchFortuneResultPrefecture(from: user)
+            self.resultPrefecture = result
+        } catch {
+            // TODO: FortuneView に戻る
+            // アラートを表示して、OK 押させて FortuneView に戻す
+            print(error)
+        }
     }
 }
 
 protocol PrefectureFortuneTeller {
-    func fetchFortuneResultPrefecture(from: User) -> Prefecture
+    func fetchFortuneResultPrefecture(from: User) async throws -> Prefecture
 }

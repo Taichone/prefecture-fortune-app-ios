@@ -12,3 +12,9 @@ struct YearMonthDay: Encodable {
     var month: Int
     var day: Int
 }
+
+extension YearMonthDay {
+    static func today() -> Self {
+        return Date().convertToYearMonthDay()
+    }
+}
