@@ -15,3 +15,14 @@ struct Prefecture: Decodable {
     let logoUrl: String
     let brief: String
 }
+
+extension Prefecture {
+    static let placeholder = Prefecture(
+        name: "",
+        capital: "",
+        citizenDay: nil,
+        hasCoastLine: false,
+        logoUrl: "",
+        brief: ""
+    )
+}

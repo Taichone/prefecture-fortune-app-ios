@@ -13,7 +13,7 @@ class FortuneViewModel: ObservableObject {
     @Published var birthday = Date()
     @Published var bloodType = User.BloodType.a
     @Published var fortuneResultViewIsLoading = true
-    var resultPrefecture = Prefecture(name: "", capital: "", citizenDay: nil, hasCoastLine: false, logoUrl: "", brief: "")
+    var resultPrefecture = Prefecture.placeholder
     let fortuneTeller: PrefectureFortuneTeller
 
     init(fortuneTeller: PrefectureFortuneTeller) {

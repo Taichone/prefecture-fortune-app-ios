@@ -33,6 +33,6 @@ final class FortuneAPIClient {
 extension FortuneAPIClient: PrefectureFortuneTeller {
     func fetchFortuneResultPrefecture(from user: User) -> Prefecture {
         // TODO: API リクエスト
-        return Prefecture(name: "", capital: "", citizenDay: nil, hasCoastLine: false, logoUrl: "", brief: "")
+        return Prefecture.placeholder
     }
 }
