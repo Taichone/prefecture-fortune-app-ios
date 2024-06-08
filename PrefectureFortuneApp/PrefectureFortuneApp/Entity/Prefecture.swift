@@ -6,9 +6,7 @@
 //
 
 import Foundation
-import SwiftData
 
-@Model
 final class Prefecture {
     let name: String
     let capital: String
