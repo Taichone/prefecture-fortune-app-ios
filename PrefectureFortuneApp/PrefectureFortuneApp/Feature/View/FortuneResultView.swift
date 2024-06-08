@@ -21,25 +21,13 @@ struct FortuneResultView: View {
                     ProgressView()
                 }
             } else {
-                List {
-                    Text(self.viewModel.resultPrefecture.name)
-                    Text("Capital: " + self.viewModel.resultPrefecture.capital)
-                    Text(
-                        self.viewModel.resultPrefecture.hasCoastLine ?
-                        "With coastline" : "No coastline"
-                    )
-                    if let citizenDayString = self.viewModel.resultPrefecture.citizenDay?.convertToString() {
-                        Text("CitizenDay: " + citizenDayString)
-                    }
-                    Text(self.viewModel.resultPrefecture.brief)
-                    PrefectureImage(imageUrl: self.viewModel.resultPrefecture.logoUrl)
-#if DEBUG
-                    Button("Send backNavigationTrigger") {
-                        self.viewModel.backNavigationTrigger.send()
-                    }
-#endif
-                }
+                PrefectureView(prefecture: self.viewModel.resultPrefecture)
             }
+#if DEBUG
+            Button("Send backNavigationTrigger") {
+                self.viewModel.backNavigationTrigger.send()
+            }
+#endif
         }
         .onAppear {
             self.viewModel.onFortuneResultViewAppear()
