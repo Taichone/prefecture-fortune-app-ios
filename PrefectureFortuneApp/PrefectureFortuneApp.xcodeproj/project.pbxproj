@@ -26,6 +26,7 @@
 		52E13B1E2C12D74600A5A7C4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 52E13B1D2C12D74600A5A7C4 /* Alamofire */; };
 		52E13B222C13F91C00A5A7C4 /* FortuneViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13B212C13F91C00A5A7C4 /* FortuneViewUITests.swift */; };
 		52E13B252C13FFF500A5A7C4 /* PrefectureImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13B242C13FFF500A5A7C4 /* PrefectureImage.swift */; };
+		52E4914C2C15979F0063FE41 /* FortuneLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4914B2C15979F0063FE41 /* FortuneLogViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		52E13B172C12D25D00A5A7C4 /* FortuneAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneAPIClient.swift; sourceTree = "<group>"; };
 		52E13B212C13F91C00A5A7C4 /* FortuneViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneViewUITests.swift; sourceTree = "<group>"; };
 		52E13B242C13FFF500A5A7C4 /* PrefectureImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureImage.swift; sourceTree = "<group>"; };
+		52E4914B2C15979F0063FE41 /* FortuneLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneLogViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,21 +97,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		52BEFCD32C14760F00AFD253 /* FortuneView */ = {
+		52BEFCD32C14760F00AFD253 /* Fortune */ = {
 			isa = PBXGroup;
 			children = (
-				52E13AFC2C12AF3800A5A7C4 /* View */,
-				52E13AFD2C12AF3C00A5A7C4 /* ViewModel */,
+				52E13B042C12AFBC00A5A7C4 /* FortuneView.swift */,
+				52E13B0B2C12C52600A5A7C4 /* FortuneResultView.swift */,
+				52E13AFE2C12AF5000A5A7C4 /* FortuneViewModel.swift */,
 			);
-			path = FortuneView;
+			path = Fortune;
 			sourceTree = "<group>";
 		};
-		52BEFCD42C14764900AFD253 /* FortuneLogView */ = {
+		52BEFCD42C14764900AFD253 /* FortuneLog */ = {
 			isa = PBXGroup;
 			children = (
 				52BEFCD72C147A6900AFD253 /* FortuneLogView.swift */,
+				52E4914B2C15979F0063FE41 /* FortuneLogViewModel.swift */,
 			);
-			path = FortuneLogView;
+			path = FortuneLog;
 			sourceTree = "<group>";
 		};
 		52BEFCD62C14776C00AFD253 /* Root */ = {
@@ -185,7 +189,6 @@
 				52E13AEB2C11D5F800A5A7C4 /* MonthDay.swift */,
 				52E13AE82C11D59800A5A7C4 /* YearMonthDay.swift */,
 				52E13AED2C11D82F00A5A7C4 /* User.swift */,
-				52E13AEF2C11D84C00A5A7C4 /* Prefecture.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -194,28 +197,11 @@
 			isa = PBXGroup;
 			children = (
 				52E13B232C13FFC900A5A7C4 /* Components */,
-				52BEFCD32C14760F00AFD253 /* FortuneView */,
-				52BEFCD42C14764900AFD253 /* FortuneLogView */,
+				52BEFCD32C14760F00AFD253 /* Fortune */,
+				52BEFCD42C14764900AFD253 /* FortuneLog */,
 				52BEFCD62C14776C00AFD253 /* Root */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		52E13AFC2C12AF3800A5A7C4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				52E13B042C12AFBC00A5A7C4 /* FortuneView.swift */,
-				52E13B0B2C12C52600A5A7C4 /* FortuneResultView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		52E13AFD2C12AF3C00A5A7C4 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				52E13AFE2C12AF5000A5A7C4 /* FortuneViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		52E13B012C12AF7500A5A7C4 /* Extensions */ = {
@@ -246,6 +232,7 @@
 		52E491482C157BC20063FE41 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				52E13AEF2C11D84C00A5A7C4 /* Prefecture.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -396,6 +383,7 @@
 				52E13B252C13FFF500A5A7C4 /* PrefectureImage.swift in Sources */,
 				52E13AFF2C12AF5000A5A7C4 /* FortuneViewModel.swift in Sources */,
 				52E13B0C2C12C52600A5A7C4 /* FortuneResultView.swift in Sources */,
+				52E4914C2C15979F0063FE41 /* FortuneLogViewModel.swift in Sources */,
 				52BEFCD82C147A6900AFD253 /* FortuneLogView.swift in Sources */,
 				52BEFCDA2C147A8300AFD253 /* MainTabView.swift in Sources */,
 				52E13AEE2C11D82F00A5A7C4 /* User.swift in Sources */,
