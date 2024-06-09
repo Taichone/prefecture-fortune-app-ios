@@ -7,7 +7,7 @@
 
 import XCTest
 
-class FortuneViewUITests: XCTestCase {
+final class FortuneViewUITests: XCTestCase {
     func testBackNavigationTrigger_sendされるとFortuneResultViewからFortuneViewに遷移すること() {
         let app = XCUIApplication()
         app.launch()

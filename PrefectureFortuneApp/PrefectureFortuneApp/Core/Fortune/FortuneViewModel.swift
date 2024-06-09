@@ -10,7 +10,7 @@ import SwiftData
 import Combine
 
 @Observable
-class FortuneViewModel {
+final class FortuneViewModel {
     var name = ""
     var birthday = Date()
     var bloodType = User.BloodType.a
