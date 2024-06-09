@@ -148,6 +148,7 @@
 				52E13AFB2C12AF2C00A5A7C4 /* Core */,
 				52E13AE62C11D55E00A5A7C4 /* Entity */,
 				52E13B012C12AF7500A5A7C4 /* Extensions */,
+				52E491482C157BC20063FE41 /* Model */,
 				52E13B0D2C12CC4600A5A7C4 /* Service */,
 				52E13AC22C11D3D000A5A7C4 /* Preview Content */,
 			);
@@ -240,6 +241,13 @@
 				52BEFCCF2C14452100AFD253 /* PrefectureView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		52E491482C157BC20063FE41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftData
 import Combine
 
 @MainActor
@@ -14,11 +15,16 @@ class FortuneViewModel: ObservableObject {
     @Published var birthday = Date()
     @Published var bloodType = User.BloodType.a
     @Published var fortuneResultViewIsLoading = true
-    var resultPrefecture = Prefecture()
+    private(set) var resultPrefecture = Prefecture()
+    var modelContext: ModelContext? = nil
     let fortuneTeller: PrefectureFortuneTeller
     let backNavigationTrigger = PassthroughSubject<Void, Never>()
 
-    init(fortuneTeller: PrefectureFortuneTeller) {
+    init(
+        modelContext: ModelContext? = nil,
+        fortuneTeller: PrefectureFortuneTeller
+    ) {
+        self.modelContext = modelContext
         self.fortuneTeller = fortuneTeller
     }
 
@@ -40,10 +46,17 @@ class FortuneViewModel: ObservableObject {
         do {
             let result = try await self.fortuneTeller.fetchFortuneResultPrefecture(from: user)
             self.resultPrefecture = result
+            self.addPrefecture(result)
         } catch {
             self.backNavigationTrigger.send() // FortuneView に戻す
             print(error)
         }
+    }
+
+    private func addPrefecture(_ prefecture: Prefecture) {
+        guard let modelContext = self.modelContext else { return }
+
+        modelContext.insert(prefecture)
     }
 }
 
