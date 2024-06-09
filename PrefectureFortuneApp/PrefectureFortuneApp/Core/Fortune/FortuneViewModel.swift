@@ -56,7 +56,17 @@ final class FortuneViewModel {
     private func addPrefecture(_ prefecture: Prefecture) {
         guard let modelContext = self.modelContext else { return }
 
-        modelContext.insert(prefecture)
+        // 同じ name を持つ Prefecture が存在しない場合は modelContext に追加
+        do {
+            let descriptor = FetchDescriptor<Prefecture>(sortBy: [SortDescriptor(\.name)])
+            let prefectures = try modelContext.fetch(descriptor)
+            if prefectures.first(where: { $0.name == prefecture.name }) == nil {
+                modelContext.insert(prefecture)
+            }
+        } catch {
+            print("Error: \(error.localizedDescription)")
+            return
+        }
     }
 }
 
