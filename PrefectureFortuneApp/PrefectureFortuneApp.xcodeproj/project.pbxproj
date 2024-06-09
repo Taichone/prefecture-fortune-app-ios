@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		52BEFCD02C14452100AFD253 /* PrefectureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BEFCCF2C14452100AFD253 /* PrefectureView.swift */; };
+		52BEFCD82C147A6900AFD253 /* FortuneLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BEFCD72C147A6900AFD253 /* FortuneLogView.swift */; };
+		52BEFCDA2C147A8300AFD253 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BEFCD92C147A8300AFD253 /* MainTabView.swift */; };
 		52E13ABD2C11D3CE00A5A7C4 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13ABC2C11D3CE00A5A7C4 /* App.swift */; };
 		52E13AC12C11D3D000A5A7C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */; };
 		52E13AC42C11D3D000A5A7C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E13AC32C11D3D000A5A7C4 /* Preview Assets.xcassets */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		52BEFCCF2C14452100AFD253 /* PrefectureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureView.swift; sourceTree = "<group>"; };
+		52BEFCD72C147A6900AFD253 /* FortuneLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneLogView.swift; sourceTree = "<group>"; };
+		52BEFCD92C147A8300AFD253 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		52E13AB92C11D3CE00A5A7C4 /* PrefectureFortuneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrefectureFortuneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E13ABC2C11D3CE00A5A7C4 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 		52BEFCD42C14764900AFD253 /* FortuneLogView */ = {
 			isa = PBXGroup;
 			children = (
+				52BEFCD72C147A6900AFD253 /* FortuneLogView.swift */,
 			);
 			path = FortuneLogView;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 		52BEFCD62C14776C00AFD253 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				52BEFCD92C147A8300AFD253 /* MainTabView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -382,6 +388,8 @@
 				52E13B252C13FFF500A5A7C4 /* PrefectureImage.swift in Sources */,
 				52E13AFF2C12AF5000A5A7C4 /* FortuneViewModel.swift in Sources */,
 				52E13B0C2C12C52600A5A7C4 /* FortuneResultView.swift in Sources */,
+				52BEFCD82C147A6900AFD253 /* FortuneLogView.swift in Sources */,
+				52BEFCDA2C147A8300AFD253 /* MainTabView.swift in Sources */,
 				52E13AEE2C11D82F00A5A7C4 /* User.swift in Sources */,
 				52E13ABD2C11D3CE00A5A7C4 /* App.swift in Sources */,
 			);
