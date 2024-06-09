@@ -40,13 +40,17 @@ struct MainTabView: View {
                 Image(systemName: "mappin.and.ellipse")
             }.tag(0)
 
-            FortuneLogView()
-                .onAppear {
-                    self.selectedIndex = 1
-                }
-                .tabItem {
-                    Image(systemName: "clock.arrow.circlepath")
-                }.tag(1)
+            FortuneLogView(
+                viewModel: FortuneLogViewModel(
+                    modelContext: .init(self.sharedModelContainer)
+                )
+            )
+            .onAppear {
+                self.selectedIndex = 1
+            }
+            .tabItem {
+                Image(systemName: "clock.arrow.circlepath")
+            }.tag(1)
         }
     }
 }

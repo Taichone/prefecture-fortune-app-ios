@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct FortuneLogView: View {
+    @State var viewModel: FortuneLogViewModel
+
     var body: some View {
-        Text("FortuneLogView")
+        NavigationStack {
+            List {
+                ForEach(self.viewModel.prefectures, id: \.id) { prefecture in
+                    NavigationLink(
+                        destination: PrefectureView(prefecture: prefecture),
+                        label: { Text(prefecture.name).bold() }
+                    )
+                }
+            }
+        }
+        .onAppear {
+            self.viewModel.onAppear()
+        }
     }
 }
 
 #Preview {
-    FortuneLogView()
+    FortuneLogView(viewModel: FortuneLogViewModel())
 }
