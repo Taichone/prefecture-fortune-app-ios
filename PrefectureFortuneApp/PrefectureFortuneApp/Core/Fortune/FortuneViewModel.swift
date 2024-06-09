@@ -9,12 +9,12 @@ import Foundation
 import SwiftData
 import Combine
 
-@MainActor
-class FortuneViewModel: ObservableObject {
-    @Published var name = ""
-    @Published var birthday = Date()
-    @Published var bloodType = User.BloodType.a
-    @Published var fortuneResultViewIsLoading = true
+@Observable
+class FortuneViewModel {
+    var name = ""
+    var birthday = Date()
+    var bloodType = User.BloodType.a
+    var fortuneResultViewIsLoading = true
     private(set) var resultPrefecture = Prefecture()
     var modelContext: ModelContext? = nil
     let fortuneTeller: PrefectureFortuneTeller
