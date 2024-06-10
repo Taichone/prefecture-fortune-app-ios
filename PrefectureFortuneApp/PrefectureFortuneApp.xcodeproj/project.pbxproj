@@ -28,6 +28,8 @@
 		52E13B252C13FFF500A5A7C4 /* PrefectureImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E13B242C13FFF500A5A7C4 /* PrefectureImage.swift */; };
 		52E4914C2C15979F0063FE41 /* FortuneLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4914B2C15979F0063FE41 /* FortuneLogViewModel.swift */; };
 		52E4914F2C16BB0C0063FE41 /* FortuneResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4914E2C16BB0C0063FE41 /* FortuneResultViewModel.swift */; };
+		52E4918B2C17244B0063FE41 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4918A2C17244B0063FE41 /* MapViewModel.swift */; };
+		52E4918D2C17245B0063FE41 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4918C2C17245B0063FE41 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		52E13B242C13FFF500A5A7C4 /* PrefectureImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureImage.swift; sourceTree = "<group>"; };
 		52E4914B2C15979F0063FE41 /* FortuneLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneLogViewModel.swift; sourceTree = "<group>"; };
 		52E4914E2C16BB0C0063FE41 /* FortuneResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneResultViewModel.swift; sourceTree = "<group>"; };
+		52E4918A2C17244B0063FE41 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		52E4918C2C17245B0063FE41 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,7 @@
 				52E13B232C13FFC900A5A7C4 /* Components */,
 				52BEFCD32C14760F00AFD253 /* Fortune */,
 				52BEFCD42C14764900AFD253 /* FortuneLog */,
+				52E491892C1724380063FE41 /* Map */,
 				52BEFCD62C14776C00AFD253 /* Root */,
 			);
 			path = Core;
@@ -238,6 +243,15 @@
 				52E13AEF2C11D84C00A5A7C4 /* Prefecture.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		52E491892C1724380063FE41 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				52E4918A2C17244B0063FE41 /* MapViewModel.swift */,
+				52E4918C2C17245B0063FE41 /* MapView.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,12 +397,14 @@
 				52E13B182C12D25D00A5A7C4 /* FortuneAPIClient.swift in Sources */,
 				52E4914F2C16BB0C0063FE41 /* FortuneResultViewModel.swift in Sources */,
 				52E13B072C12B63700A5A7C4 /* Date.swift in Sources */,
+				52E4918D2C17245B0063FE41 /* MapView.swift in Sources */,
 				52E13AEC2C11D5F800A5A7C4 /* MonthDay.swift in Sources */,
 				52E13B252C13FFF500A5A7C4 /* PrefectureImage.swift in Sources */,
 				52E13AFF2C12AF5000A5A7C4 /* FortuneViewModel.swift in Sources */,
 				52E13B0C2C12C52600A5A7C4 /* FortuneResultView.swift in Sources */,
 				52E4914C2C15979F0063FE41 /* FortuneLogViewModel.swift in Sources */,
 				52BEFCD82C147A6900AFD253 /* FortuneLogView.swift in Sources */,
+				52E4918B2C17244B0063FE41 /* MapViewModel.swift in Sources */,
 				52BEFCDA2C147A8300AFD253 /* MainTabView.swift in Sources */,
 				52E13AEE2C11D82F00A5A7C4 /* User.swift in Sources */,
 				52E13ABD2C11D3CE00A5A7C4 /* App.swift in Sources */,
