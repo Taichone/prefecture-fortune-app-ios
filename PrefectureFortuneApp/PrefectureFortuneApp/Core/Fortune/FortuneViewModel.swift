@@ -24,15 +24,6 @@ final class FortuneViewModel {
     var isLoading = false
     var isLoaded = false
 
-    // TODO: - refactor: createUserFromInput の定義場所を下へ
-    private func createUserFromInput() -> User {
-        return User(
-            name: self.name,
-            birthday: self.birthday.convertToYearMonthDay(),
-            bloodType: self.bloodType
-        )
-    }
-
     init(
         modelContext: ModelContext? = nil,
         prefectureProvider: PrefectureProvider
@@ -51,8 +42,7 @@ final class FortuneViewModel {
         }
     }
 
-    // TODO: setResultPrefecture を private に
-    func setResultPrefecture() async {
+    private func setResultPrefecture() async {
         self.isLoaded = false
         do {
             let result = try await self.prefectureProvider.getPrefecture(from: self.createUserFromInput())
@@ -62,6 +52,14 @@ final class FortuneViewModel {
         } catch {
             print(error)
         }
+    }
+
+    private func createUserFromInput() -> User {
+        return User(
+            name: self.name,
+            birthday: self.birthday.convertToYearMonthDay(),
+            bloodType: self.bloodType
+        )
     }
 
     /// Adds a `Prefecture` to the `modelContext`.
