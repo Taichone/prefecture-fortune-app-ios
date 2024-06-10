@@ -14,14 +14,26 @@ struct PrefectureView: View {
         NavigationStack {
             List {
                 Text(self.prefecture.name)
-                Text("Capital: " + self.prefecture.capital)
+                Text(
+                    String(
+                        localized: "Capital"
+                    ) + ": \(self.prefecture.capital)"
+                )
                 Text(
                     self.prefecture.hasCoastLine ?
-                    "With coastline" : "No coastline"
+                    String(
+                        localized: "With coastline"
+                    ) : String(
+                        localized: "No coastline"
+                    )
                 )
                 if let month = self.prefecture.citizenMonth,
                    let day = self.prefecture.citizenDay {
-                    Text("CitizenDay: " + "\(month)/\(day)")
+                    Text(
+                        String(
+                            localized: "Citizen day"
+                        ) + ": \(month)/\(day)"
+                    )
                 }
                 Text(self.prefecture.brief)
                 PrefectureImage(imageUrl: self.prefecture.logoUrl)
