@@ -71,6 +71,16 @@
         }
       }
     },
+    "Fortune History" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "占い履歴"
+          }
+        }
+      }
+    },
     "No coastline" : {
       "localizations" : {
         "ja" : {

@@ -13,7 +13,6 @@ struct PrefectureView: View {
     var body: some View {
         NavigationStack {
             List {
-                Text(self.prefecture.name)
                 Text(
                     String(
                         localized: "Capital"
@@ -50,6 +49,7 @@ struct PrefectureView: View {
                     }
                 )
             }
+            .navigationTitle(self.prefecture.name)
         }
     }
 }

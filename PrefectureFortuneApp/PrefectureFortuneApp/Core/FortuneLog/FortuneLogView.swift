@@ -20,6 +20,7 @@ struct FortuneLogView: View {
                     )
                 }
             }
+            .navigationTitle("Fortune History")
         }
         .onAppear {
             self.viewModel.onAppear()
