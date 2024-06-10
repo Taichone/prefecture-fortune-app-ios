@@ -26,8 +26,8 @@ final class FortuneLogViewModel {
         guard let modelContext = self.modelContext else { return }
 
         do {
-            // TODO: 最後に占われた日時でソートするよう変更
-            let descriptor = FetchDescriptor<Prefecture>(sortBy: [SortDescriptor(\.name)])
+            // Prefecture を最後に占われたタイミングの Date の降順でソート
+            let descriptor = FetchDescriptor<Prefecture>(sortBy: [SortDescriptor(\.lastFortuneTellingDate, order: .reverse)])
             self.prefectures = try modelContext.fetch(descriptor)
         } catch {
             print("Error: \(error.localizedDescription)")

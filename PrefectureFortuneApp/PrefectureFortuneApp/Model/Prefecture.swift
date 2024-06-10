@@ -17,6 +17,7 @@ final class Prefecture {
     let hasCoastLine: Bool
     let logoUrl: String
     let brief: String
+    var lastFortuneTellingDate: Date
 
     init(
         name: String = "",
@@ -34,6 +35,7 @@ final class Prefecture {
         self.hasCoastLine = hasCoastLine
         self.logoUrl = logoUrl
         self.brief = brief
+        self.lastFortuneTellingDate = Date()
     }
 }
 
