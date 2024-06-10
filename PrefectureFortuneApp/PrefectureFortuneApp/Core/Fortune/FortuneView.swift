@@ -65,11 +65,28 @@ struct FortuneView: View {
     }
 }
 
-#Preview {
-    FortuneView(
-        viewModel: FortuneViewModel(
-            modelContext: .init(PrefectureFortuneApp.sharedModelContainer),
-            prefectureProvider: FortuneAPIClient.shared
-        )
+fileprivate struct FortuneViewPreviewWrapper: View {
+    private class MockFortuneAPIClient: PrefectureProvider {
+        func getPrefecture(from: User) async throws -> Prefecture {
+            sleep(2)
+            throw PrefectureError.failed
+        }
+
+        enum PrefectureError: Error {
+            case failed
+        }
+    }
+
+    @State private var viewModel = FortuneViewModel(
+        modelContext: .init(PrefectureFortuneApp.sharedModelContainer),
+        prefectureProvider: MockFortuneAPIClient()
     )
+
+    var body: some View {
+        FortuneView(viewModel: self.viewModel)
+    }
+}
+
+#Preview {
+    FortuneViewPreviewWrapper()
 }

@@ -24,6 +24,7 @@ final class FortuneViewModel {
     var isLoading = false
     var isLoaded = false
 
+    // TODO: - refactor: createUserFromInput の定義場所を下へ
     private func createUserFromInput() -> User {
         return User(
             name: self.name,
@@ -41,13 +42,16 @@ final class FortuneViewModel {
     }
 
     func onTapFortuneButton() {
-        Task {
+        if !self.isLoading {
             self.isLoading = true
-            await self.setResultPrefecture()
-            self.isLoading = false
+            Task {
+                await self.setResultPrefecture()
+                self.isLoading = false
+            }
         }
     }
 
+    // TODO: setResultPrefecture を private に
     func setResultPrefecture() async {
         self.isLoaded = false
         do {
