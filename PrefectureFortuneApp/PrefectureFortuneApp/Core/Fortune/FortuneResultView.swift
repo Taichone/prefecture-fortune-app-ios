@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct FortuneResultView: View {
-    let viewModel: FortuneViewModel
+    @State var viewModel: FortuneResultViewModel
     @State private var showDismissAlert = false
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
         VStack {
-            if self.viewModel.fortuneResultViewIsLoading {
+            if self.viewModel.isLoading {
                 HStack {
                     Text("Loading...")
                         .padding()
@@ -29,9 +29,6 @@ struct FortuneResultView: View {
             }
 #endif
         }
-        .onAppear {
-            self.viewModel.onFortuneResultViewAppear()
-        }
         .onReceive(self.viewModel.backNavigationTrigger) { _ in
             self.showDismissAlert = true
         }
@@ -40,7 +37,7 @@ struct FortuneResultView: View {
                 title: Text("Error"),
                 message: Text("An error has occurred. Please try again."),
                 dismissButton: .default(Text("OK")) {
-                    self.dismiss.callAsFunction() // FortuneView に戻る
+                    self.dismiss() // FortuneView に戻る
                 }
             )
         }
@@ -48,14 +45,16 @@ struct FortuneResultView: View {
 }
 
 fileprivate struct FortuneResultViewPreviewWrapper: View {
-    private class MockFortuneAPIClient: PrefectureFortuneTeller {
-        func fetchFortuneResultPrefecture(from: User) async throws -> Prefecture {
+    private class MockFortuneAPIClient: PrefectureProvider {
+        func getPrefecture(from: User) async throws -> Prefecture {
             return Prefecture.aichi
         }
     }
 
-    @State private var viewModel = FortuneViewModel(
-        fortuneTeller: MockFortuneAPIClient()
+    @State private var viewModel = FortuneResultViewModel(
+        user: User(name: "name", birthday: YearMonthDay.today(), bloodType: .a),
+        modelContext: .init(PrefectureFortuneApp.sharedModelContainer),
+        prefectureProvider: MockFortuneAPIClient()
     )
 
     var body: some View {
