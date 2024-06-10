@@ -64,5 +64,10 @@ struct FortuneView: View {
 }
 
 #Preview {
-    FortuneView(viewModel: FortuneViewModel())
+    FortuneView(
+        viewModel: FortuneViewModel(
+            user: User(name: "", birthday: YearMonthDay.today(), bloodType: .a),
+            prefectureProvider: FortuneAPIClient.shared
+        )
+    )
 }

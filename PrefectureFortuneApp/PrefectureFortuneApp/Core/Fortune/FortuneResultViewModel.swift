@@ -68,7 +68,3 @@ final class FortuneResultViewModel {
         }
     }
 }
-
-protocol PrefectureProvider {
-    func getPrefecture(from: User) async throws -> Prefecture
-}
