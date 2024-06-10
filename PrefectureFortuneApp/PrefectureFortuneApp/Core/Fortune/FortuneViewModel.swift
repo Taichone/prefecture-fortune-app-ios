@@ -31,6 +31,7 @@ final class FortuneViewModel {
         self.prefectureProvider = prefectureProvider
     }
 
+    @MainActor
     func onTapFortuneButton() {
         if !self.isLoading {
             self.isLoading = true
@@ -41,6 +42,7 @@ final class FortuneViewModel {
         }
     }
 
+    @MainActor
     private func setResultPrefecture() async {
         self.isLoaded = false
         do {
