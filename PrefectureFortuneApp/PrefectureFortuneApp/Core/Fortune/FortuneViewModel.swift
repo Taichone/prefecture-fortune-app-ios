@@ -21,9 +21,10 @@ final class FortuneViewModel {
     private let prefectureProvider: PrefectureProvider
     private(set) var resultPrefecture = Prefecture()
     let backNavigationTrigger = PassthroughSubject<Void, Never>()
-    var isLoading = true
+    var isLoading = false
+    var isLoaded = false
 
-    func createUserFromInput() -> User {
+    private func createUserFromInput() -> User {
         return User(
             name: self.name,
             birthday: self.birthday.convertToYearMonthDay(),
@@ -32,28 +33,29 @@ final class FortuneViewModel {
     }
 
     init(
-        user: User,
         modelContext: ModelContext? = nil,
         prefectureProvider: PrefectureProvider
     ) {
         self.modelContext = modelContext
         self.prefectureProvider = prefectureProvider
+    }
 
-        // 表示する Prefecture をセット
+    func onTapFortuneButton() {
         Task {
             self.isLoading = true
-            await self.setResultPrefecture(from: user)
+            await self.setResultPrefecture()
             self.isLoading = false
         }
     }
 
-    func setResultPrefecture(from user: User) async {
+    func setResultPrefecture() async {
+        self.isLoaded = false
         do {
-            let result = try await self.prefectureProvider.getPrefecture(from: user)
+            let result = try await self.prefectureProvider.getPrefecture(from: self.createUserFromInput())
             self.resultPrefecture = result
             self.addPrefecture(result)
+            self.isLoaded = true
         } catch {
-            self.backNavigationTrigger.send() // FortuneView に戻す
             print(error)
         }
     }
