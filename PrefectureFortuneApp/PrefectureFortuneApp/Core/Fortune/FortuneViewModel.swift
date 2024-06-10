@@ -20,7 +20,6 @@ final class FortuneViewModel {
     private var modelContext: ModelContext? = nil
     private let prefectureProvider: PrefectureProvider
     private(set) var resultPrefecture = Prefecture()
-    let backNavigationTrigger = PassthroughSubject<Void, Never>()
     var isLoading = false
     var isLoaded = false
 
