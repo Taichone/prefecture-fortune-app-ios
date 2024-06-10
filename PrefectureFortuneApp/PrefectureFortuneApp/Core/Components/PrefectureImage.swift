@@ -46,5 +46,5 @@ extension PrefectureImage {
 }
 
 #Preview {
-    PrefectureImage(imageUrl: "https://japan-map.com/wp-content/uploads/aichi.png")
+    PrefectureImage(imageUrl: Prefecture.aichi.logoUrl)
 }

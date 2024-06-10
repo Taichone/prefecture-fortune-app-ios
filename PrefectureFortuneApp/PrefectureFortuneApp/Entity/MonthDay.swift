@@ -11,9 +11,3 @@ struct MonthDay: Decodable {
     let month: Int
     let day: Int
 }
-
-extension MonthDay {
-    func convertToString() -> String {
-        return "\(self.month)/\(self.day)"
-    }
-}

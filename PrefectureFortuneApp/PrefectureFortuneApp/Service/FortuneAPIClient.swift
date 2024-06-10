@@ -32,7 +32,8 @@ final class FortuneAPIClient {
             return Prefecture(
                 name: self.name,
                 capital: self.capital,
-                citizenDay: self.citizen_day,
+                citizenMonth: self.citizen_day?.month,
+                citizenDay: self.citizen_day?.day,
                 hasCoastLine: self.has_coast_line,
                 logoUrl: self.logo_url,
                 brief: self.brief
@@ -41,8 +42,8 @@ final class FortuneAPIClient {
     }
 }
 
-extension FortuneAPIClient: PrefectureFortuneTeller {
-    func fetchFortuneResultPrefecture(from user: User) async throws -> Prefecture {
+extension FortuneAPIClient: PrefectureProvider {
+    func getPrefecture(from user: User) async throws -> Prefecture {
         let endPoint = "https://yumemi-ios-junior-engineer-codecheck.app.swift.cloud/my_fortune"
         let headers: HTTPHeaders = ["API-Version": "v1"]
         let requestBody = Self.RequestBody(

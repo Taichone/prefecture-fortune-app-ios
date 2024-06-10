@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 struct FortuneView: View {
-    @StateObject var viewModel: FortuneViewModel
+    @State var viewModel: FortuneViewModel
 
     var body: some View {
         NavigationStack {
@@ -40,7 +40,13 @@ struct FortuneView: View {
 
                 if !self.viewModel.name.isEmpty {
                     NavigationLink(
-                        destination: FortuneResultView(viewModel: self.viewModel),
+                        destination: FortuneResultView(
+                            viewModel: FortuneResultViewModel(
+                                user: self.viewModel.createUserFromInput(),
+                                modelContext: .init(PrefectureFortuneApp.sharedModelContainer),
+                                prefectureProvider: FortuneAPIClient.shared
+                            )
+                        ),
                         label: {
                             Text("Check Fortune!")
                                 .bold()
@@ -58,5 +64,5 @@ struct FortuneView: View {
 }
 
 #Preview {
-    FortuneView(viewModel: FortuneViewModel(fortuneTeller: FortuneAPIClient.shared))
+    FortuneView(viewModel: FortuneViewModel())
 }
