@@ -58,5 +58,10 @@ struct FortuneView: View {
 }
 
 #Preview {
-    FortuneView(viewModel: FortuneViewModel(fortuneTeller: FortuneAPIClient.shared))
+    FortuneView(
+        viewModel: FortuneViewModel(
+            modelContext: .init(PrefectureFortuneApp.sharedModelContainer),
+            fortuneTeller: FortuneAPIClient.shared
+        )
+    )
 }

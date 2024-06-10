@@ -9,30 +9,17 @@ import SwiftUI
 import SwiftData
 
 struct MainTabView: View {
-    private var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Prefecture.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
     @State private var selectedIndex = 0
 
     var body: some View {
         TabView(selection: self.$selectedIndex) {
             FortuneView(
                 viewModel: FortuneViewModel(
-                    modelContext: .init(self.sharedModelContainer),
+                    modelContext: .init(PrefectureFortuneApp.sharedModelContainer),
                     fortuneTeller: FortuneAPIClient.shared
                 )
             )
-            .modelContainer(self.sharedModelContainer)
+            .modelContainer(PrefectureFortuneApp.sharedModelContainer)
             .onAppear {
                 self.selectedIndex = 0
             }
@@ -42,7 +29,7 @@ struct MainTabView: View {
 
             FortuneLogView(
                 viewModel: FortuneLogViewModel(
-                    modelContext: .init(self.sharedModelContainer)
+                    modelContext: .init(PrefectureFortuneApp.sharedModelContainer)
                 )
             )
             .onAppear {

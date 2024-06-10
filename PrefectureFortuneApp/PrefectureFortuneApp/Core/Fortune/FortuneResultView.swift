@@ -55,6 +55,7 @@ fileprivate struct FortuneResultViewPreviewWrapper: View {
     }
 
     @State private var viewModel = FortuneViewModel(
+        modelContext: .init(PrefectureFortuneApp.sharedModelContainer),
         fortuneTeller: MockFortuneAPIClient()
     )
 
