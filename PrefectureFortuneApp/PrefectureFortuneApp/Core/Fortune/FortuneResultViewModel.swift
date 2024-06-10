@@ -14,14 +14,16 @@ final class FortuneResultViewModel {
     var fortuneResultViewIsLoading = true
     private(set) var resultPrefecture = Prefecture()
     var modelContext: ModelContext? = nil
+    let user: User
     let fortuneTeller: PrefectureFortuneTeller
     let backNavigationTrigger = PassthroughSubject<Void, Never>()
 
-    // TODO: user を受け取って self.user = user で初期化する
     init(
+        user: User,
         modelContext: ModelContext? = nil,
         fortuneTeller: PrefectureFortuneTeller
     ) {
+        self.user = user
         self.modelContext = modelContext
         self.fortuneTeller = fortuneTeller
     }
@@ -35,15 +37,8 @@ final class FortuneResultViewModel {
     }
 
     private func fetchResultPrefecture() async {
-        // TODO: self.user を使う
-        let user = User(
-            name: "",
-            birthday: YearMonthDay.today(),
-            bloodType: User.BloodType.a
-        )
-
         do {
-            let result = try await self.fortuneTeller.fetchFortuneResultPrefecture(from: user)
+            let result = try await self.fortuneTeller.fetchFortuneResultPrefecture(from: self.user)
             self.resultPrefecture = result
             self.addPrefecture(result)
         } catch {

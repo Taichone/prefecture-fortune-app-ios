@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FortuneResultView: View {
-    let viewModel: FortuneViewModel
+    @State var viewModel: FortuneResultViewModel
     @State private var showDismissAlert = false
     @Environment(\.dismiss) var dismiss
 
@@ -54,7 +54,8 @@ fileprivate struct FortuneResultViewPreviewWrapper: View {
         }
     }
 
-    @State private var viewModel = FortuneViewModel(
+    @State private var viewModel = FortuneResultViewModel(
+        user: User(name: "name", birthday: YearMonthDay.today(), bloodType: .a),
         modelContext: .init(PrefectureFortuneApp.sharedModelContainer),
         fortuneTeller: MockFortuneAPIClient()
     )

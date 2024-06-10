@@ -40,7 +40,13 @@ struct FortuneView: View {
 
                 if !self.viewModel.name.isEmpty {
                     NavigationLink(
-                        destination: FortuneResultView(viewModel: self.viewModel),
+                        destination: FortuneResultView(
+                            viewModel: FortuneResultViewModel(
+                                user: self.viewModel.createUserFromInput(),
+                                modelContext: .init(PrefectureFortuneApp.sharedModelContainer),
+                                fortuneTeller: FortuneAPIClient.shared
+                            )
+                        ),
                         label: {
                             Text("Check Fortune!")
                                 .bold()
@@ -58,10 +64,5 @@ struct FortuneView: View {
 }
 
 #Preview {
-    FortuneView(
-        viewModel: FortuneViewModel(
-            modelContext: .init(PrefectureFortuneApp.sharedModelContainer),
-            fortuneTeller: FortuneAPIClient.shared
-        )
-    )
+    FortuneView(viewModel: FortuneViewModel())
 }
