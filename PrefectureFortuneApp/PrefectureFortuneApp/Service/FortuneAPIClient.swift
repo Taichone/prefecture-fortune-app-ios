@@ -42,8 +42,8 @@ final class FortuneAPIClient {
     }
 }
 
-extension FortuneAPIClient: PrefectureFortuneTeller {
-    func fetchFortuneResultPrefecture(from user: User) async throws -> Prefecture {
+extension FortuneAPIClient: PrefectureProvider {
+    func getPrefecture(from user: User) async throws -> Prefecture {
         let endPoint = "https://yumemi-ios-junior-engineer-codecheck.app.swift.cloud/my_fortune"
         let headers: HTTPHeaders = ["API-Version": "v1"]
         let requestBody = Self.RequestBody(

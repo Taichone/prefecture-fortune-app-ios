@@ -15,17 +15,17 @@ final class FortuneResultViewModel {
     private(set) var resultPrefecture = Prefecture()
     var modelContext: ModelContext? = nil
     let user: User
-    let fortuneTeller: PrefectureFortuneTeller
+    let prefectureProvider: PrefectureProvider
     let backNavigationTrigger = PassthroughSubject<Void, Never>()
 
     init(
         user: User,
         modelContext: ModelContext? = nil,
-        fortuneTeller: PrefectureFortuneTeller
+        prefectureProvider: PrefectureProvider
     ) {
         self.user = user
         self.modelContext = modelContext
-        self.fortuneTeller = fortuneTeller
+        self.prefectureProvider = prefectureProvider
     }
 
     func onFortuneResultViewAppear() {
@@ -38,7 +38,7 @@ final class FortuneResultViewModel {
 
     private func fetchResultPrefecture() async {
         do {
-            let result = try await self.fortuneTeller.fetchFortuneResultPrefecture(from: self.user)
+            let result = try await self.prefectureProvider.getPrefecture(from: self.user)
             self.resultPrefecture = result
             self.addPrefecture(result)
         } catch {
@@ -72,6 +72,6 @@ final class FortuneResultViewModel {
     }
 }
 
-protocol PrefectureFortuneTeller {
-    func fetchFortuneResultPrefecture(from: User) async throws -> Prefecture
+protocol PrefectureProvider {
+    func getPrefecture(from: User) async throws -> Prefecture
 }

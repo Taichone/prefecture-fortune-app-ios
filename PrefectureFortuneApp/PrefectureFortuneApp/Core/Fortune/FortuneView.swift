@@ -44,7 +44,7 @@ struct FortuneView: View {
                             viewModel: FortuneResultViewModel(
                                 user: self.viewModel.createUserFromInput(),
                                 modelContext: .init(PrefectureFortuneApp.sharedModelContainer),
-                                fortuneTeller: FortuneAPIClient.shared
+                                prefectureProvider: FortuneAPIClient.shared
                             )
                         ),
                         label: {
