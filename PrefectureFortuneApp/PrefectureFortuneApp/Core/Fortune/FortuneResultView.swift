@@ -40,7 +40,7 @@ struct FortuneResultView: View {
                 title: Text("Error"),
                 message: Text("An error has occurred. Please try again."),
                 dismissButton: .default(Text("OK")) {
-                    self.dismiss.callAsFunction() // FortuneView に戻る
+                    self.dismiss() // FortuneView に戻る
                 }
             )
         }
