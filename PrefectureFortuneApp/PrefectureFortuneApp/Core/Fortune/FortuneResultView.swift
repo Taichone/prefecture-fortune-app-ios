@@ -29,9 +29,6 @@ struct FortuneResultView: View {
             }
 #endif
         }
-        .onAppear {
-            self.viewModel.onFortuneResultViewAppear()
-        }
         .onReceive(self.viewModel.backNavigationTrigger) { _ in
             self.showDismissAlert = true
         }

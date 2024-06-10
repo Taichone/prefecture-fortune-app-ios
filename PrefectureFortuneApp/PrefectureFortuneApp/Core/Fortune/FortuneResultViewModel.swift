@@ -14,7 +14,6 @@ final class FortuneResultViewModel {
     var isLoading = true
     private(set) var resultPrefecture = Prefecture()
     var modelContext: ModelContext? = nil
-    let user: User
     let prefectureProvider: PrefectureProvider
     let backNavigationTrigger = PassthroughSubject<Void, Never>()
 
@@ -23,22 +22,20 @@ final class FortuneResultViewModel {
         modelContext: ModelContext? = nil,
         prefectureProvider: PrefectureProvider
     ) {
-        self.user = user
         self.modelContext = modelContext
         self.prefectureProvider = prefectureProvider
-    }
 
-    func onFortuneResultViewAppear() {
+        // 表示する Prefecture をセット
         Task {
             self.isLoading = true
-            await self.fetchResultPrefecture()
+            await self.setResultPrefecture(from: user)
             self.isLoading = false
         }
     }
 
-    private func fetchResultPrefecture() async {
+    private func setResultPrefecture(from user: User) async {
         do {
-            let result = try await self.prefectureProvider.getPrefecture(from: self.user)
+            let result = try await self.prefectureProvider.getPrefecture(from: user)
             self.resultPrefecture = result
             self.addPrefecture(result)
         } catch {
