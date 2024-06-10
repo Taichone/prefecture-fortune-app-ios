@@ -11,11 +11,11 @@ import Combine
 
 @Observable
 final class FortuneResultViewModel {
-    var isLoading = true
+    private var modelContext: ModelContext? = nil
+    private let prefectureProvider: PrefectureProvider
     private(set) var resultPrefecture = Prefecture()
-    var modelContext: ModelContext? = nil
-    let prefectureProvider: PrefectureProvider
     let backNavigationTrigger = PassthroughSubject<Void, Never>()
+    var isLoading = true
 
     init(
         user: User,
