@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 struct FortuneView: View {
-    @StateObject var viewModel: FortuneViewModel
+    @State var viewModel: FortuneViewModel
 
     var body: some View {
         NavigationStack {
