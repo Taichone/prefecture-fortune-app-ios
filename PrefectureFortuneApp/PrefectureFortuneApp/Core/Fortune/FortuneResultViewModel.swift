@@ -11,7 +11,7 @@ import Combine
 
 @Observable
 final class FortuneResultViewModel {
-    var fortuneResultViewIsLoading = true
+    var isLoading = true
     private(set) var resultPrefecture = Prefecture()
     var modelContext: ModelContext? = nil
     let user: User
@@ -30,9 +30,9 @@ final class FortuneResultViewModel {
 
     func onFortuneResultViewAppear() {
         Task {
-            self.fortuneResultViewIsLoading = true
+            self.isLoading = true
             await self.fetchResultPrefecture()
-            self.fortuneResultViewIsLoading = false
+            self.isLoading = false
         }
     }
 

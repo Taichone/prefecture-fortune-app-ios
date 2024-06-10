@@ -14,7 +14,7 @@ struct FortuneResultView: View {
 
     var body: some View {
         VStack {
-            if self.viewModel.fortuneResultViewIsLoading {
+            if self.viewModel.isLoading {
                 HStack {
                     Text("Loading...")
                         .padding()
