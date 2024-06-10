@@ -14,7 +14,10 @@ struct MainTabView: View {
     var body: some View {
         TabView(selection: self.$selectedIndex) {
             FortuneView(
-                viewModel: FortuneViewModel()
+                viewModel: FortuneViewModel(
+                    modelContext: .init(PrefectureFortuneApp.sharedModelContainer),
+                    prefectureProvider: FortuneAPIClient.shared
+                )
             )
             .modelContainer(PrefectureFortuneApp.sharedModelContainer)
             .onAppear {
