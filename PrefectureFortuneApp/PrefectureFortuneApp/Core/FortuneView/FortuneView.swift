@@ -15,7 +15,7 @@ struct FortuneView: View {
         ZStack {
             NavigationStack {
                 List {
-                    Section("Your Information") {
+                    Section {
                         TextField("Enter your name", text: Binding<String>(
                             get: { self.viewModel.name },
                             set: {
@@ -57,7 +57,9 @@ struct FortuneView: View {
                 .navigationDestination(isPresented: self.$viewModel.isLoaded, destination: {
                     PrefectureView(prefecture: self.viewModel.resultPrefecture)
                 })
+                .navigationTitle("Your Information")
             }
+
             if self.viewModel.isLoading {
                 ProgressView()
             }

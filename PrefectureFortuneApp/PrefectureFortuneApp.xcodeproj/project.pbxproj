@@ -27,17 +27,11 @@
 		52E4914C2C15979F0063FE41 /* FortuneLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4914B2C15979F0063FE41 /* FortuneLogViewModel.swift */; };
 		52E4918B2C17244B0063FE41 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4918A2C17244B0063FE41 /* MapViewModel.swift */; };
 		52E4918D2C17245B0063FE41 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4918C2C17245B0063FE41 /* MapView.swift */; };
+		52E491912C1760CB0063FE41 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 52E491902C1760CB0063FE41 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		52E13ACA2C11D3D000A5A7C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52E13AB12C11D3CE00A5A7C4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52E13AB82C11D3CE00A5A7C4;
-			remoteInfo = PrefectureFortuneApp;
-		};
-		52E13AD42C11D3D000A5A7C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 52E13AB12C11D3CE00A5A7C4 /* Project object */;
 			proxyType = 1;
@@ -55,7 +49,6 @@
 		52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E13AC32C11D3D000A5A7C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52E13AC92C11D3D000A5A7C4 /* PrefectureFortuneAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrefectureFortuneAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52E13AD32C11D3D000A5A7C4 /* PrefectureFortuneAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrefectureFortuneAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E13AE82C11D59800A5A7C4 /* YearMonthDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearMonthDay.swift; sourceTree = "<group>"; };
 		52E13AEB2C11D5F800A5A7C4 /* MonthDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDay.swift; sourceTree = "<group>"; };
 		52E13AED2C11D82F00A5A7C4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -69,6 +62,7 @@
 		52E4914B2C15979F0063FE41 /* FortuneLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneLogViewModel.swift; sourceTree = "<group>"; };
 		52E4918A2C17244B0063FE41 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		52E4918C2C17245B0063FE41 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		52E491902C1760CB0063FE41 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,40 +81,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52E13AD02C11D3D000A5A7C4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		52BEFCD32C14760F00AFD253 /* Fortune */ = {
+		52BEFCD32C14760F00AFD253 /* FortuneView */ = {
 			isa = PBXGroup;
 			children = (
 				52E13B042C12AFBC00A5A7C4 /* FortuneView.swift */,
 				52E13AFE2C12AF5000A5A7C4 /* FortuneViewModel.swift */,
 			);
-			path = Fortune;
+			path = FortuneView;
 			sourceTree = "<group>";
 		};
-		52BEFCD42C14764900AFD253 /* FortuneLog */ = {
+		52BEFCD42C14764900AFD253 /* FortuneLogView */ = {
 			isa = PBXGroup;
 			children = (
 				52BEFCD72C147A6900AFD253 /* FortuneLogView.swift */,
 				52E4914B2C15979F0063FE41 /* FortuneLogViewModel.swift */,
 			);
-			path = FortuneLog;
+			path = FortuneLogView;
 			sourceTree = "<group>";
 		};
-		52BEFCD62C14776C00AFD253 /* Root */ = {
+		52BEFCD62C14776C00AFD253 /* MainTabView */ = {
 			isa = PBXGroup;
 			children = (
 				52BEFCD92C147A8300AFD253 /* MainTabView.swift */,
 			);
-			path = Root;
+			path = MainTabView;
 			sourceTree = "<group>";
 		};
 		52E13AB02C11D3CE00A5A7C4 = {
@@ -128,7 +115,6 @@
 			children = (
 				52E13ABB2C11D3CE00A5A7C4 /* PrefectureFortuneApp */,
 				52E13ACC2C11D3D000A5A7C4 /* PrefectureFortuneAppTests */,
-				52E13AD62C11D3D000A5A7C4 /* PrefectureFortuneAppUITests */,
 				52E13ABA2C11D3CE00A5A7C4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -138,7 +124,6 @@
 			children = (
 				52E13AB92C11D3CE00A5A7C4 /* PrefectureFortuneApp.app */,
 				52E13AC92C11D3D000A5A7C4 /* PrefectureFortuneAppTests.xctest */,
-				52E13AD32C11D3D000A5A7C4 /* PrefectureFortuneAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +131,7 @@
 		52E13ABB2C11D3CE00A5A7C4 /* PrefectureFortuneApp */ = {
 			isa = PBXGroup;
 			children = (
+				52E491902C1760CB0063FE41 /* Localizable.xcstrings */,
 				52E13AC02C11D3D000A5A7C4 /* Assets.xcassets */,
 				52E13ABC2C11D3CE00A5A7C4 /* App.swift */,
 				52E13AFB2C12AF2C00A5A7C4 /* Core */,
@@ -174,13 +160,6 @@
 			path = PrefectureFortuneAppTests;
 			sourceTree = "<group>";
 		};
-		52E13AD62C11D3D000A5A7C4 /* PrefectureFortuneAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PrefectureFortuneAppUITests;
-			sourceTree = "<group>";
-		};
 		52E13AE62C11D55E00A5A7C4 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,11 +173,11 @@
 		52E13AFB2C12AF2C00A5A7C4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				52E13B232C13FFC900A5A7C4 /* Components */,
-				52BEFCD32C14760F00AFD253 /* Fortune */,
-				52BEFCD42C14764900AFD253 /* FortuneLog */,
-				52E491892C1724380063FE41 /* Map */,
-				52BEFCD62C14776C00AFD253 /* Root */,
+				52BEFCD42C14764900AFD253 /* FortuneLogView */,
+				52BEFCD32C14760F00AFD253 /* FortuneView */,
+				52BEFCD62C14776C00AFD253 /* MainTabView */,
+				52E491892C1724380063FE41 /* MapView */,
+				52E13B232C13FFC900A5A7C4 /* PrefectureView */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -219,13 +198,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		52E13B232C13FFC900A5A7C4 /* Components */ = {
+		52E13B232C13FFC900A5A7C4 /* PrefectureView */ = {
 			isa = PBXGroup;
 			children = (
-				52E13B242C13FFF500A5A7C4 /* PrefectureImage.swift */,
 				52BEFCCF2C14452100AFD253 /* PrefectureView.swift */,
+				52E491932C17D2080063FE41 /* Components */,
 			);
-			path = Components;
+			path = PrefectureView;
 			sourceTree = "<group>";
 		};
 		52E491482C157BC20063FE41 /* Model */ = {
@@ -236,13 +215,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		52E491892C1724380063FE41 /* Map */ = {
+		52E491892C1724380063FE41 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
-				52E4918A2C17244B0063FE41 /* MapViewModel.swift */,
 				52E4918C2C17245B0063FE41 /* MapView.swift */,
+				52E4918A2C17244B0063FE41 /* MapViewModel.swift */,
 			);
-			path = Map;
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		52E491932C17D2080063FE41 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				52E13B242C13FFF500A5A7C4 /* PrefectureImage.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,24 +273,6 @@
 			productReference = 52E13AC92C11D3D000A5A7C4 /* PrefectureFortuneAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		52E13AD22C11D3D000A5A7C4 /* PrefectureFortuneAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 52E13AE32C11D3D000A5A7C4 /* Build configuration list for PBXNativeTarget "PrefectureFortuneAppUITests" */;
-			buildPhases = (
-				52E13ACF2C11D3D000A5A7C4 /* Sources */,
-				52E13AD02C11D3D000A5A7C4 /* Frameworks */,
-				52E13AD12C11D3D000A5A7C4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				52E13AD52C11D3D000A5A7C4 /* PBXTargetDependency */,
-			);
-			name = PrefectureFortuneAppUITests;
-			productName = PrefectureFortuneAppUITests;
-			productReference = 52E13AD32C11D3D000A5A7C4 /* PrefectureFortuneAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -321,10 +290,6 @@
 						CreatedOnToolsVersion = 15.3;
 						TestTargetID = 52E13AB82C11D3CE00A5A7C4;
 					};
-					52E13AD22C11D3D000A5A7C4 = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = 52E13AB82C11D3CE00A5A7C4;
-					};
 				};
 			};
 			buildConfigurationList = 52E13AB42C11D3CE00A5A7C4 /* Build configuration list for PBXProject "PrefectureFortuneApp" */;
@@ -334,6 +299,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 52E13AB02C11D3CE00A5A7C4;
 			packageReferences = (
@@ -345,7 +311,6 @@
 			targets = (
 				52E13AB82C11D3CE00A5A7C4 /* PrefectureFortuneApp */,
 				52E13AC82C11D3D000A5A7C4 /* PrefectureFortuneAppTests */,
-				52E13AD22C11D3D000A5A7C4 /* PrefectureFortuneAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -357,17 +322,11 @@
 			files = (
 				52E13AC42C11D3D000A5A7C4 /* Preview Assets.xcassets in Resources */,
 				52E13AC12C11D3D000A5A7C4 /* Assets.xcassets in Resources */,
+				52E491912C1760CB0063FE41 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		52E13AC72C11D3D000A5A7C4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52E13AD12C11D3D000A5A7C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,13 +367,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52E13ACF2C11D3D000A5A7C4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -422,11 +374,6 @@
 			isa = PBXTargetDependency;
 			target = 52E13AB82C11D3CE00A5A7C4 /* PrefectureFortuneApp */;
 			targetProxy = 52E13ACA2C11D3D000A5A7C4 /* PBXContainerItemProxy */;
-		};
-		52E13AD52C11D3D000A5A7C4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 52E13AB82C11D3CE00A5A7C4 /* PrefectureFortuneApp */;
-			targetProxy = 52E13AD42C11D3D000A5A7C4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -648,42 +595,6 @@
 			};
 			name = Release;
 		};
-		52E13AE42C11D3D000A5A7C4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PBBV5BVMZD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.taichone.PrefectureFortuneAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PrefectureFortuneApp;
-			};
-			name = Debug;
-		};
-		52E13AE52C11D3D000A5A7C4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PBBV5BVMZD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.taichone.PrefectureFortuneAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PrefectureFortuneApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -710,15 +621,6 @@
 			buildConfigurations = (
 				52E13AE12C11D3D000A5A7C4 /* Debug */,
 				52E13AE22C11D3D000A5A7C4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		52E13AE32C11D3D000A5A7C4 /* Build configuration list for PBXNativeTarget "PrefectureFortuneAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				52E13AE42C11D3D000A5A7C4 /* Debug */,
-				52E13AE52C11D3D000A5A7C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

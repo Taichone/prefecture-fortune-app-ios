@@ -1,0 +1,116 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Birthday" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "誕生日"
+          }
+        }
+      }
+    },
+    "Blood Type" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "血液型"
+          }
+        }
+      }
+    },
+    "Capital" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "都道府県庁所在地"
+          }
+        }
+      }
+    },
+    "Check Fortune!" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "都道府県を占う！"
+          }
+        }
+      }
+    },
+    "Check the location!" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地図で確認する！"
+          }
+        }
+      }
+    },
+    "Citizen day" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "都道府県民の日"
+          }
+        }
+      }
+    },
+    "Enter your name" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名前を入力してください"
+          }
+        }
+      }
+    },
+    "Fortune History" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "占い履歴"
+          }
+        }
+      }
+    },
+    "No coastline" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海岸線なし"
+          }
+        }
+      }
+    },
+    "With coastline" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海岸線あり"
+          }
+        }
+      }
+    },
+    "Your Information" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "あなたの情報"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
