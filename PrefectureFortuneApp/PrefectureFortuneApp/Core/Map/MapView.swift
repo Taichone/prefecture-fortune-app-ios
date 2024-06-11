@@ -14,7 +14,7 @@ struct MapView: View {
     var body: some View {
         VStack {
             Map(initialPosition: self.viewModel.cameraPosition)
-            .edgesIgnoringSafeArea(.all)
+                .edgesIgnoringSafeArea(.all)
         }
     }
 }
