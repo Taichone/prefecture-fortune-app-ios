@@ -84,30 +84,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		52BEFCD32C14760F00AFD253 /* Fortune */ = {
+		52BEFCD32C14760F00AFD253 /* FortuneView */ = {
 			isa = PBXGroup;
 			children = (
 				52E13B042C12AFBC00A5A7C4 /* FortuneView.swift */,
 				52E13AFE2C12AF5000A5A7C4 /* FortuneViewModel.swift */,
 			);
-			path = Fortune;
+			path = FortuneView;
 			sourceTree = "<group>";
 		};
-		52BEFCD42C14764900AFD253 /* FortuneLog */ = {
+		52BEFCD42C14764900AFD253 /* FortuneLogView */ = {
 			isa = PBXGroup;
 			children = (
 				52BEFCD72C147A6900AFD253 /* FortuneLogView.swift */,
 				52E4914B2C15979F0063FE41 /* FortuneLogViewModel.swift */,
 			);
-			path = FortuneLog;
+			path = FortuneLogView;
 			sourceTree = "<group>";
 		};
-		52BEFCD62C14776C00AFD253 /* Root */ = {
+		52BEFCD62C14776C00AFD253 /* MainTabView */ = {
 			isa = PBXGroup;
 			children = (
 				52BEFCD92C147A8300AFD253 /* MainTabView.swift */,
 			);
-			path = Root;
+			path = MainTabView;
 			sourceTree = "<group>";
 		};
 		52E13AB02C11D3CE00A5A7C4 = {
@@ -173,11 +173,11 @@
 		52E13AFB2C12AF2C00A5A7C4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				52E13B232C13FFC900A5A7C4 /* Components */,
-				52BEFCD32C14760F00AFD253 /* Fortune */,
-				52BEFCD42C14764900AFD253 /* FortuneLog */,
-				52E491892C1724380063FE41 /* Map */,
-				52BEFCD62C14776C00AFD253 /* Root */,
+				52BEFCD42C14764900AFD253 /* FortuneLogView */,
+				52BEFCD32C14760F00AFD253 /* FortuneView */,
+				52BEFCD62C14776C00AFD253 /* MainTabView */,
+				52E491892C1724380063FE41 /* MapView */,
+				52E13B232C13FFC900A5A7C4 /* PrefectureView */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -198,13 +198,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		52E13B232C13FFC900A5A7C4 /* Components */ = {
+		52E13B232C13FFC900A5A7C4 /* PrefectureView */ = {
 			isa = PBXGroup;
 			children = (
-				52E13B242C13FFF500A5A7C4 /* PrefectureImage.swift */,
 				52BEFCCF2C14452100AFD253 /* PrefectureView.swift */,
+				52E491932C17D2080063FE41 /* Components */,
 			);
-			path = Components;
+			path = PrefectureView;
 			sourceTree = "<group>";
 		};
 		52E491482C157BC20063FE41 /* Model */ = {
@@ -215,13 +215,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		52E491892C1724380063FE41 /* Map */ = {
+		52E491892C1724380063FE41 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
-				52E4918A2C17244B0063FE41 /* MapViewModel.swift */,
 				52E4918C2C17245B0063FE41 /* MapView.swift */,
+				52E4918A2C17244B0063FE41 /* MapViewModel.swift */,
 			);
-			path = Map;
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		52E491932C17D2080063FE41 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				52E13B242C13FFF500A5A7C4 /* PrefectureImage.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
