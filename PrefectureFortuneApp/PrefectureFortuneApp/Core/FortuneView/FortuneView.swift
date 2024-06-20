@@ -39,20 +39,16 @@ struct FortuneView: View {
                         }
                     }
 
-                    if !self.viewModel.name.isEmpty,
-                       !self.viewModel.isLoading {
-                        Button {
-                            self.viewModel.onTapFortuneButton()
-                        } label: {
-                            Text("Check Fortune!")
-                                .bold()
-                                .foregroundStyle(.blue)
-                        }
-                    } else {
+                    Button {
+                        self.viewModel.onTapFortuneButton()
+                    } label: {
                         Text("Check Fortune!")
                             .bold()
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(
+                                (self.viewModel.name.isEmpty || self.viewModel.isLoading) ? .gray : .blue
+                            )
                     }
+                    .disabled(self.viewModel.name.isEmpty || self.viewModel.isLoading)
                 }
                 .navigationDestination(isPresented: self.$viewModel.isLoaded, destination: {
                     PrefectureView(prefecture: self.viewModel.resultPrefecture)

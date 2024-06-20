@@ -53,27 +53,16 @@ extension FortuneAPIClient: PrefectureProvider {
             today: YearMonthDay.today()
         )
 
-        return try await withCheckedThrowingContinuation { continuation in
-            AF.request(
-                endPoint,
-                method: .post,
-                parameters: requestBody,
-                encoder: JSONParameterEncoder.default,
-                headers: headers
-            )
-            .validate()
-            .responseDecodable(of: ResponseBody.self) { response in
-                switch response.result {
-                case .success(let responseBody):
-                    continuation.resume(returning: responseBody.convertToPrefecture())
-                case .failure(let error):
-                    if let data = response.data,
-                       let errorMessage = String(data: data, encoding: .utf8) {
-                        print("Error: \(errorMessage)")
-                    }
-                    continuation.resume(throwing: error)
-                }
-            }
-        }
+        let response = try await AF.request(
+            endPoint,
+            method: .post,
+            parameters: requestBody,
+            encoder: JSONParameterEncoder.default,
+            headers: headers
+        )
+        .validate()
+        .serializingDecodable(ResponseBody.self).value
+
+        return response.convertToPrefecture()
     }
 }
