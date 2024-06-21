@@ -16,7 +16,7 @@ struct FortuneLogView: View {
                 ForEach(self.viewModel.prefectures, id: \.id) { prefecture in
                     NavigationLink(
                         destination: PrefectureView(prefecture: prefecture),
-                        label: { Text(prefecture.name).bold() }
+                        label: { Text(prefecture.info.name).bold() }
                     )
                 }
             }

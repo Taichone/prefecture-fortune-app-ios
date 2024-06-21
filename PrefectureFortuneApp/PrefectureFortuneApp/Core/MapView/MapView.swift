@@ -20,5 +20,5 @@ struct MapView: View {
 }
 
 #Preview {
-    MapView(viewModel: MapViewModel(locationName: Prefecture.aichi.capital))
+    MapView(viewModel: MapViewModel(locationName: PrefectureInfo.aichi.capital))
 }

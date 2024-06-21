@@ -16,7 +16,7 @@ struct MainTabView: View {
             FortuneView(
                 viewModel: FortuneViewModel(
                     modelContext: .init(PrefectureFortuneApp.sharedModelContainer),
-                    prefectureProvider: FortuneAPIClient.shared
+                    prefectureInfoProvider: FortuneAPIClient.shared
                 )
             )
             .modelContainer(PrefectureFortuneApp.sharedModelContainer)

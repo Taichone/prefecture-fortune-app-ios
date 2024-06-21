@@ -64,8 +64,8 @@ struct FortuneView: View {
 }
 
 fileprivate struct FortuneViewPreviewWrapper: View {
-    private class MockFortuneAPIClient: PrefectureProvider {
-        func getPrefecture(from: User) async throws -> Prefecture {
+    private class MockFortuneAPIClient: PrefectureInfoProvider {
+        func getPrefectureInfo(from: User) async throws -> PrefectureInfo {
             sleep(2)
             throw PrefectureError.failed
         }
@@ -77,7 +77,7 @@ fileprivate struct FortuneViewPreviewWrapper: View {
 
     @State private var viewModel = FortuneViewModel(
         modelContext: .init(PrefectureFortuneApp.sharedModelContainer),
-        prefectureProvider: MockFortuneAPIClient()
+        prefectureInfoProvider: MockFortuneAPIClient()
     )
 
     var body: some View {
