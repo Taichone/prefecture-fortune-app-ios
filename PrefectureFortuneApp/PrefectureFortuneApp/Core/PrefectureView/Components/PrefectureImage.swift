@@ -64,5 +64,5 @@ extension PrefectureImage {
 }
 
 #Preview {
-    PrefectureImage(imageUrl: Prefecture.aichi.logoUrl)
+    PrefectureImage(imageUrl: PrefectureInfo.aichi.logoUrl)
 }

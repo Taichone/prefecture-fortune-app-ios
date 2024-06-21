@@ -18,17 +18,17 @@ final class FortuneViewModel {
 
     // MARK: properties
     private var modelContext: ModelContext? = nil
-    private let prefectureProvider: PrefectureProvider
-    private(set) var resultPrefecture = Prefecture()
+    private let prefectureInfoProvider: PrefectureInfoProvider
+    private(set) var resultPrefecture = Prefecture(info: .placeholder)
     var isLoading = false
     var isLoaded = false
 
     init(
         modelContext: ModelContext? = nil,
-        prefectureProvider: PrefectureProvider
+        prefectureInfoProvider: PrefectureInfoProvider
     ) {
         self.modelContext = modelContext
-        self.prefectureProvider = prefectureProvider
+        self.prefectureInfoProvider = prefectureInfoProvider
     }
 
     @MainActor
@@ -46,9 +46,9 @@ final class FortuneViewModel {
     private func setResultPrefecture() async {
         self.isLoaded = false
         do {
-            let result = try await self.prefectureProvider.getPrefecture(from: self.createUserFromInput())
-            self.resultPrefecture = result
-            self.addPrefecture(result)
+            let result = try await self.prefectureInfoProvider.getPrefectureInfo(from: self.createUserFromInput())
+            self.resultPrefecture = Prefecture(info: result)
+            self.addPrefecture(self.resultPrefecture)
             self.isLoaded = true
         } catch {
             print(error)
@@ -74,9 +74,9 @@ final class FortuneViewModel {
         guard let modelContext = self.modelContext else { return }
 
         do {
-            let descriptor = FetchDescriptor<Prefecture>(sortBy: [SortDescriptor(\.name)])
+            let descriptor = FetchDescriptor<Prefecture>(sortBy: [SortDescriptor(\.info.name)])
             let prefectures = try modelContext.fetch(descriptor)
-            if let existingPrefecture = prefectures.first(where: { $0.name == prefecture.name }) {
+            if let existingPrefecture = prefectures.first(where: { $0.info.name == prefecture.info.name }) {
                 existingPrefecture.lastFortuneTellingDate = Date()
             } else {
                 modelContext.insert(prefecture)
@@ -88,10 +88,9 @@ final class FortuneViewModel {
     }
 }
 
-protocol PrefectureProvider {
-    func getPrefecture(from: User) async throws -> Prefecture
+protocol PrefectureInfoProvider {
+    func getPrefectureInfo(from: User) async throws -> PrefectureInfo
 }
-
 
 extension FortuneViewModel {
     /// Fortune API の RequestBody.name 文字数上限

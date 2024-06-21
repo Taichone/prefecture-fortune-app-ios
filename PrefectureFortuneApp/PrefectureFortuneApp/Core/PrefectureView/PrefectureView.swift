@@ -16,30 +16,30 @@ struct PrefectureView: View {
                 Text(
                     String(
                         localized: "Capital"
-                    ) + ": \(self.prefecture.capital)"
+                    ) + ": \(self.prefecture.info.capital)"
                 )
                 Text(
-                    self.prefecture.hasCoastLine ?
+                    self.prefecture.info.hasCoastLine ?
                     String(
                         localized: "With coastline"
                     ) : String(
                         localized: "No coastline"
                     )
                 )
-                if let month = self.prefecture.citizenMonth,
-                   let day = self.prefecture.citizenDay {
+                if let month = self.prefecture.info.citizenMonth,
+                   let day = self.prefecture.info.citizenDay {
                     Text(
                         String(
                             localized: "Citizen day"
                         ) + ": \(month)/\(day)"
                     )
                 }
-                Text(self.prefecture.brief)
-                PrefectureImage(imageUrl: self.prefecture.logoUrl)
+                Text(self.prefecture.info.brief)
+                PrefectureImage(imageUrl: self.prefecture.info.logoUrl)
                 NavigationLink(
                     destination: MapView(
                         viewModel: MapViewModel(
-                            locationName: self.prefecture.capital
+                            locationName: self.prefecture.info.capital
                         )
                     ),
                     label: {
@@ -49,12 +49,12 @@ struct PrefectureView: View {
                     }
                 )
             }
-            .navigationTitle(self.prefecture.name)
+            .navigationTitle(self.prefecture.info.name)
         }
     }
 }
 
 #Preview {
-    PrefectureView(prefecture: Prefecture.aichi)
+    PrefectureView(prefecture: Prefecture(info: .aichi))
 }
 
