@@ -75,16 +75,19 @@ fileprivate struct FortuneViewPreviewWrapper: View {
         }
     }
 
-    @State private var viewModel = FortuneViewModel(
-        modelContext: .init(PrefectureFortuneApp.sharedModelContainer),
-        prefectureInfoProvider: MockFortuneAPIClient()
-    )
+    @Environment(\.modelContext) private var modelContext
 
     var body: some View {
-        FortuneView(viewModel: self.viewModel)
+        FortuneView(
+            viewModel: .init(
+                modelContext: self.modelContext,
+                prefectureInfoProvider: MockFortuneAPIClient()
+            )
+        )
     }
 }
 
 #Preview {
     FortuneViewPreviewWrapper()
+        .modelContainer(Prefecture.previewModelContainer)
 }

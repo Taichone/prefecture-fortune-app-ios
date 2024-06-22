@@ -18,6 +18,18 @@ final class Prefecture {
     }
 }
 
+extension Prefecture {
+    @MainActor
+    static var previewModelContainer: ModelContainer {
+        let container = try! ModelContainer(
+            for: Prefecture.self,
+            configurations: ModelConfiguration(isStoredInMemoryOnly: true)
+        )
+        container.mainContext.insert(Prefecture(info: .aichi))
+        return container
+    }
+}
+
 struct PrefectureInfo: Codable {
     let name: String
     let capital: String
