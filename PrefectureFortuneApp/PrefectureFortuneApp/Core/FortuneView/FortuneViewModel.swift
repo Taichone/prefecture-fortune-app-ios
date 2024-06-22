@@ -20,6 +20,7 @@ final class FortuneViewModel {
     private var modelContext: ModelContext? = nil
     private let prefectureInfoProvider: PrefectureInfoProvider
     private(set) var resultPrefecture = Prefecture(info: .placeholder)
+    var showMaxNameCountAlert = false
     var isLoading = false
     var isLoaded = false
 

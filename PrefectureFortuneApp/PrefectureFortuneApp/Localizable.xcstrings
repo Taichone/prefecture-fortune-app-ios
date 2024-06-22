@@ -82,6 +82,27 @@
       }
     },
     "Invalid Image URL 😭" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無効な画像URLです😭"
+          }
+        }
+      }
+    },
+    "Keep your name within %lld characters" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名前は%lld文字以下にしてください"
+          }
+        }
+      }
+    },
+    "Name too long" : {
 
     },
     "No coastline" : {
@@ -93,6 +114,9 @@
           }
         }
       }
+    },
+    "OK" : {
+
     },
     "With coastline" : {
       "localizations" : {

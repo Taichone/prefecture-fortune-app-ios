@@ -20,9 +20,14 @@ struct FortuneView: View {
                             get: { self.viewModel.name },
                             set: {
                                 // 文字数を制限して set する
-                                self.viewModel.name = String(
-                                    $0.prefix(FortuneViewModel.maxNameLength)
-                                )
+                                if $0.count > 127 {
+                                    self.viewModel.showMaxNameCountAlert = true
+                                    self.viewModel.name = String(
+                                        $0.prefix(FortuneViewModel.maxNameLength)
+                                    )
+                                } else {
+                                    self.viewModel.name = $0
+                                }
                             }
                         ))
 
@@ -54,6 +59,13 @@ struct FortuneView: View {
                     PrefectureView(prefecture: self.viewModel.resultPrefecture)
                 })
                 .navigationTitle("Your Information")
+                .alert(isPresented: self.$viewModel.showMaxNameCountAlert) {
+                    Alert(
+                        title: Text("Name too long"),
+                        message: Text("Keep your name within \(FortuneViewModel.maxNameLength) characters"),
+                        dismissButton: .default(Text("OK"))
+                    )
+                }
             }
 
             if self.viewModel.isLoading {
