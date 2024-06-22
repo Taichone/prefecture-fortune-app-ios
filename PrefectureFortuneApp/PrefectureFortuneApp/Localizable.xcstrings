@@ -21,16 +21,6 @@
         }
       }
     },
-    "Capital" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "都道府県庁所在地"
-          }
-        }
-      }
-    },
     "Check Fortune!" : {
       "localizations" : {
         "ja" : {
@@ -51,12 +41,18 @@
         }
       }
     },
-    "Citizen day" : {
+    "Citizen day: %lld/%lld %@" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Citizen day: %1$lld/%2$lld"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "都道府県民の日"
+            "value" : "%3$@民の日：%1$lld/%2$lld"
           }
         }
       }
@@ -77,6 +73,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "占い履歴"
+          }
+        }
+      }
+    },
+    "Has a coastline" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海岸線あり"
           }
         }
       }
@@ -103,7 +109,14 @@
       }
     },
     "Name too long" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名前が長すぎます"
+          }
+        }
+      }
     },
     "No coastline" : {
       "localizations" : {
@@ -116,14 +129,27 @@
       }
     },
     "OK" : {
-
-    },
-    "With coastline" : {
       "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "海岸線あり"
+            "value" : "了解"
+          }
+        }
+      }
+    },
+    "The capital is %@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The capital is %1$@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$@庁所在地：%1$@"
           }
         }
       }
