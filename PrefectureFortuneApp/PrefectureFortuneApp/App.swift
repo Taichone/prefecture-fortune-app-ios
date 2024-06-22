@@ -27,6 +27,7 @@ extension PrefectureFortuneApp {
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])
         } catch {
+            // TODO: アラートを表示して、新規 Container を生成
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()

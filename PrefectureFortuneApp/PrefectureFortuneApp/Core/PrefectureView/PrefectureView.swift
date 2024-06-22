@@ -8,31 +8,25 @@
 import SwiftUI
 
 struct PrefectureView: View {
-    let prefecture: Prefecture
+    private let prefecture: Prefecture
+    private let prefectureTypeName: String
+
+    init(prefecture: Prefecture) {
+        self.prefecture = prefecture
+        self.prefectureTypeName = String(prefecture.info.name.last ?? "県")
+    }
 
     var body: some View {
         NavigationStack {
             List {
-                Text(
-                    String(
-                        localized: "Capital"
-                    ) + ": \(self.prefecture.info.capital)"
-                )
+                Text("The capital is \(self.prefecture.info.capital) \(self.prefectureTypeName)")
                 Text(
                     self.prefecture.info.hasCoastLine ?
-                    String(
-                        localized: "With coastline"
-                    ) : String(
-                        localized: "No coastline"
-                    )
+                    String(localized: "Has a coastline") : String(localized: "No coastline")
                 )
                 if let month = self.prefecture.info.citizenMonth,
                    let day = self.prefecture.info.citizenDay {
-                    Text(
-                        String(
-                            localized: "Citizen day"
-                        ) + ": \(month)/\(day)"
-                    )
+                    Text("Citizen day: \(month)/\(day) \(self.prefectureTypeName)")
                 }
                 Text(self.prefecture.info.brief)
                 PrefectureImage(imageUrl: self.prefecture.info.logoUrl)
