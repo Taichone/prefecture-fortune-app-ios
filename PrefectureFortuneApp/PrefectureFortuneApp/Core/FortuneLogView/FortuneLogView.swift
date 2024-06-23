@@ -21,6 +21,17 @@ struct FortuneLogView: View {
                 }
             }
             .navigationTitle("Fortune History")
+            .alert(
+                self.viewModel.currentAlertEntity.title,
+                isPresented: self.$viewModel.isShowingAlert,
+                presenting: self.viewModel.currentAlertEntity
+            ) { entity in
+                Button(entity.actionText) {
+                    self.viewModel.isShowingAlert = false
+                }
+            } message: { entity in
+                Text(entity.message)
+            }
         }
         .onAppear {
             self.viewModel.onAppear()

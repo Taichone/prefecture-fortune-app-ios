@@ -21,7 +21,7 @@ struct FortuneView: View {
                             set: {
                                 // 文字数を制限して set する
                                 if $0.count > 127 {
-                                    self.viewModel.showMaxNameCountAlert = true
+                                    self.viewModel.showNameTooLongAlert()
                                     self.viewModel.name = String(
                                         $0.prefix(FortuneViewModel.maxNameLength)
                                     )
@@ -59,12 +59,16 @@ struct FortuneView: View {
                     PrefectureView(prefecture: self.viewModel.resultPrefecture)
                 })
                 .navigationTitle("Your Information")
-                .alert(isPresented: self.$viewModel.showMaxNameCountAlert) {
-                    Alert(
-                        title: Text("Name too long"),
-                        message: Text("Keep your name within \(FortuneViewModel.maxNameLength) characters"),
-                        dismissButton: .default(Text("OK"))
-                    )
+                .alert(
+                    self.viewModel.currentAlertEntity.title,
+                    isPresented: self.$viewModel.isShowingAlert,
+                    presenting: self.viewModel.currentAlertEntity
+                ) { entity in
+                    Button(entity.actionText) {
+                        self.viewModel.isShowingAlert = false
+                    }
+                } message: { entity in
+                    Text(entity.message)
                 }
             }
 
@@ -76,6 +80,7 @@ struct FortuneView: View {
 }
 
 fileprivate struct FortuneViewPreviewWrapper: View {
+    // 常にエラーを投げる FortuneAPIClient のモック
     private class MockFortuneAPIClient: PrefectureInfoProvider {
         func getPrefectureInfo(from: User) async throws -> PrefectureInfo {
             sleep(2)
