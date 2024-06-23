@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5277E5C42C284DFC008DD671 /* AlertEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5277E5C32C284DFC008DD671 /* AlertEntity.swift */; };
 		52BEFCD02C14452100AFD253 /* PrefectureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BEFCCF2C14452100AFD253 /* PrefectureView.swift */; };
 		52BEFCD82C147A6900AFD253 /* FortuneLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BEFCD72C147A6900AFD253 /* FortuneLogView.swift */; };
 		52BEFCDA2C147A8300AFD253 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BEFCD92C147A8300AFD253 /* MainTabView.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5277E5C32C284DFC008DD671 /* AlertEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertEntity.swift; sourceTree = "<group>"; };
 		52BEFCCF2C14452100AFD253 /* PrefectureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureView.swift; sourceTree = "<group>"; };
 		52BEFCD72C147A6900AFD253 /* FortuneLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneLogView.swift; sourceTree = "<group>"; };
 		52BEFCD92C147A8300AFD253 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				52E13AEB2C11D5F800A5A7C4 /* MonthDay.swift */,
 				52E13AE82C11D59800A5A7C4 /* YearMonthDay.swift */,
 				52E13AED2C11D82F00A5A7C4 /* User.swift */,
+				5277E5C32C284DFC008DD671 /* AlertEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				52E13AF02C11D84C00A5A7C4 /* Prefecture.swift in Sources */,
 				52E13AE92C11D59800A5A7C4 /* YearMonthDay.swift in Sources */,
 				52E13B052C12AFBC00A5A7C4 /* FortuneView.swift in Sources */,
+				5277E5C42C284DFC008DD671 /* AlertEntity.swift in Sources */,
 				52BEFCD02C14452100AFD253 /* PrefectureView.swift in Sources */,
 				52E13B182C12D25D00A5A7C4 /* FortuneAPIClient.swift in Sources */,
 				52E13B072C12B63700A5A7C4 /* Date.swift in Sources */,

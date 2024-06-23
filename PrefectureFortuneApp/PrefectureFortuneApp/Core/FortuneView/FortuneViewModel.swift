@@ -19,9 +19,14 @@ final class FortuneViewModel {
     private var modelContext: ModelContext? = nil
     private let prefectureInfoProvider: PrefectureInfoProvider
     private(set) var resultPrefecture = Prefecture(info: .placeholder)
-    var showMaxNameCountAlert = false
-    var isLoading = false
+    private(set) var currentAlertEntity = AlertEntity(
+        title: "title",
+        message: "message",
+        actionText: "actionText"
+    )
+    var isShowingAlert = false
     var isLoaded = false
+    private(set) var isLoading = false
 
     init(
         modelContext: ModelContext? = nil,
@@ -29,6 +34,19 @@ final class FortuneViewModel {
     ) {
         self.modelContext = modelContext
         self.prefectureInfoProvider = prefectureInfoProvider
+    }
+
+    private func showAlert(title: String, message: String, actionText: String) {
+        self.currentAlertEntity = .init(title: title, message: message, actionText: actionText)
+        self.isShowingAlert = true
+    }
+
+    func showNameTooLongAlert() {
+        self.showAlert(
+            title: "Name too long",
+            message: "Keep your name within \(FortuneViewModel.maxNameLength) characters",
+            actionText: "OK"
+        )
     }
 
     @MainActor
@@ -51,8 +69,12 @@ final class FortuneViewModel {
             self.addPrefecture(self.resultPrefecture)
             self.isLoaded = true
         } catch {
-            // TODO: error handling
-            print(error)
+            self.showAlert(
+                title: "Error",
+                message: "Failed to fetch the fortune result.",
+                actionText: "Close"
+            )
+            print("Fetch FortuneAPI result Failure: \(error.localizedDescription)")
         }
     }
 
@@ -83,8 +105,12 @@ final class FortuneViewModel {
                 modelContext.insert(prefecture)
             }
         } catch {
-            // TODO: error handling
-            print("Error: \(error.localizedDescription)")
+            self.showAlert(
+                title: "Error",
+                message: "Adding the Prefecture failed.",
+                actionText: "Close"
+            )
+            print("Fetch Prefecture ModelContext Failure: \(error.localizedDescription)")
             return
         }
     }
