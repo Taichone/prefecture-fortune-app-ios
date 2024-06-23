@@ -52,6 +52,7 @@ final class FortuneViewModel {
             self.addPrefecture(self.resultPrefecture)
             self.isLoaded = true
         } catch {
+            // TODO: error handling
             print(error)
         }
     }
@@ -83,6 +84,7 @@ final class FortuneViewModel {
                 modelContext.insert(prefecture)
             }
         } catch {
+            // TODO: error handling
             print("Error: \(error.localizedDescription)")
             return
         }

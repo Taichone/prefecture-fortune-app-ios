@@ -30,6 +30,7 @@ final class FortuneLogViewModel {
             let descriptor = FetchDescriptor<Prefecture>(sortBy: [SortDescriptor(\.lastFortuneTellingDate, order: .reverse)])
             self.prefectures = try modelContext.fetch(descriptor)
         } catch {
+            // TODO: error handling
             print("Error: \(error.localizedDescription)")
         }
     }
