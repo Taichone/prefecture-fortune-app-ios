@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftData
-import Combine
 
 @Observable
 final class FortuneViewModel {
