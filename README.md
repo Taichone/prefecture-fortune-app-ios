@@ -43,7 +43,10 @@
 - Alamofire
   - Swift Package Manager によりインストール
  
-### 環境
+### 開発環境
 - Xcode 15.3
-- iOS 17.4
-- iPadOS 17.4
+- macOS 14.4.1
+
+### サポートしている OS バージョン
+- iOS 17.4 and later
+- iPadOS 17.4 and later
